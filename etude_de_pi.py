@@ -28,10 +28,11 @@ def prendre_pi_decimale():
 def compteur_de_nombre(liste_nombre):
     """
     Argument : liste_nombre : une liste d'entier.
-    Retourne : Met dans un dictionnaire les occurences des nombres triés.
+    Retourne : Met dans un dictionnaire les occurences des nombres.
     Effet : /
 
-
+    Crée un dictionnaire pour chaque valeur et contient le nombre de fois
+    qu'il apparait.
     """
     dictionnaire_occurence = {}
     for element in liste_nombre:
@@ -41,16 +42,21 @@ def compteur_de_nombre(liste_nombre):
             dictionnaire_occurence[element] += 1
     return dictionnaire_occurence
 
-liste = prendre_pi_decimale()
-test = compteur_de_nombre(liste)
-print(test)
-
-def afficheur_d_occurence(dictionnaire_occurence):
+def afficheur_occurence(dictionnaire_occurence):
     """
-    Argument : dictionnaire_occurence : un dictionnaire avec les nombres
+    Argument : dictionnaire_occurence : un dictionnaire avec les nombres.
                                         ainsi que leur occurence.
     Retourne : /
     Effet : Affiche pour chaque nombre, leur occurence.
 
-
+    Print pour chaque clé dans le dictionnaire, le nombre de fois qu'il y est.
     """
+    for clé in range(len(dictionnaire_occurence)):
+        print("Le nombre " + str(clé) + " est sorti " \
+            + str(dictionnaire_occurence[clé]) + \
+            " fois dans les décimales de pi.")
+
+if __name__ == "__main__":
+    liste = prendre_pi_decimale()
+    test = compteur_de_nombre(liste)
+    afficheur_occurence(test)
