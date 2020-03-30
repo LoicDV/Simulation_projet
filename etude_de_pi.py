@@ -1,3 +1,5 @@
+import matplotlib.pyplot as plt
+
 """
 Pour la partie codage, mettre juste après la définition :
     Argument :
@@ -56,7 +58,39 @@ def afficheur_occurence(dictionnaire_occurence):
             + str(dictionnaire_occurence[clé]) + \
             " fois dans les décimales de pi.")
 
+def dictionnaire_en_liste(dictionnaire_digit):
+    """
+    Argument : dictionnaire_digit : dictionnaire de digits des décimales de pi.
+    Retourne : 2 listes avec dans l'une les clés.
+                             dans l'autre les valeurs.
+    Effet : /
+
+    Transfome le dictionaire en 2 listes utilisables par la suite.
+    """
+    cle = []
+    valeur = []
+    for element in range(len(dictionnaire_digit)):
+        cle.append(element)
+        valeur.append(dictionnaire_digit[element])
+    return cle, valeur
+
+def histo_digits_pi(liste):
+    """
+    Argument : dictionnaire_digit :
+    Retourne : /
+    Effet : Construit un histogramme par rapport au dictionnaire fournit.
+
+    Prend toutes les décimales de pi et construis un histogramme avec pyplot.
+    """
+    titre ="Histogramme sur les décimales de pi en fonction de leur occurence."
+    plt.figure()
+    plt.hist(liste)
+    plt.xlabel("Valeur des digits")
+    plt.ylabel("Nombre d'occurence")
+    plt.title(titre)
+    plt.show()
+
 if __name__ == "__main__":
     liste = prendre_pi_decimale()
-    test = compteur_de_nombre(liste)
-    afficheur_occurence(test)
+    dico = compteur_de_nombre(liste)
+    histo_digits_pi(liste)
