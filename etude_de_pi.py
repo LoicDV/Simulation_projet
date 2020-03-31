@@ -1,4 +1,5 @@
 import matplotlib.pyplot as plt
+import math
 
 """
 Pour la partie codage, mettre juste après la définition :
@@ -74,7 +75,7 @@ def dict_to_list(dictionnaire_digit):
         valeur.append(dictionnaire_digit[element])
     return cle, valeur
 
-def histo_digits_pi(liste):
+def test_chi2(liste):
     """
     Argument : liste : liste d'entiers.
     Retourne : /
@@ -93,5 +94,21 @@ def histo_digits_pi(liste):
 liste = get_pi_decimal()
 dico = occ_number(liste)
 
+def Kr(r, N, proba):
+    """
+    Argument : r : nombres d'intervalles.
+               N : nombre total d'élément.
+           proba : probabilité d'avoir le digit en question.
+    Retourne : Le résultat du Kr.
+    Effet : /
+
+    Calcule, selon la slide 38 du cours, le Kr.
+    """
+    sol = 0
+    for i in range(r):
+        n_i = dico[i]
+        sol += math.pow((n_i - N * proba) / math.sqrt(N * proba), 2)
+    return sol
+
 if __name__ == "__main__":
-    histo_digits_pi(liste)
+    pass
