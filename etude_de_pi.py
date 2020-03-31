@@ -9,7 +9,7 @@ Pour la partie codage, mettre juste après la définition :
 et expliquer en 1-2 lignes ce que fait le code.
 """
 
-def prendre_pi_decimale():
+def get_pi_decimal():
     """
     Argument : /
     Retourne : une liste comprenant toutes les décimales de pi (max 1 million).
@@ -27,7 +27,7 @@ def prendre_pi_decimale():
                 liste_totale.append(nombre)
     return liste_totale
 
-def compteur_de_nombre(liste_nombre):
+def occ_number(liste_nombre):
     """
     Argument : liste_nombre : une liste d'entier.
     Retourne : Met dans un dictionnaire les occurences des nombres.
@@ -44,7 +44,7 @@ def compteur_de_nombre(liste_nombre):
             dictionnaire_occurence[element] += 1
     return dictionnaire_occurence
 
-def afficheur_occurence(dictionnaire_occurence):
+def display_occ(dictionnaire_occurence):
     """
     Argument : dictionnaire_occurence : un dictionnaire avec les nombres.
                                         ainsi que leur occurence.
@@ -53,12 +53,12 @@ def afficheur_occurence(dictionnaire_occurence):
 
     Print pour chaque clé dans le dictionnaire, le nombre de fois qu'il y est.
     """
-    for clé in range(len(dictionnaire_occurence)):
-        print("Le nombre " + str(clé) + " est sorti " \
-            + str(dictionnaire_occurence[clé]) + \
+    for cle in range(len(dictionnaire_occurence)):
+        print("Le nombre " + str(cle) + " est sorti " \
+            + str(dictionnaire_occurence[cle]) + \
             " fois dans les décimales de pi.")
 
-def dictionnaire_en_liste(dictionnaire_digit):
+def dict_to_list(dictionnaire_digit):
     """
     Argument : dictionnaire_digit : dictionnaire de digits des décimales de pi.
     Retourne : 2 listes avec dans l'une les clés.
@@ -76,7 +76,7 @@ def dictionnaire_en_liste(dictionnaire_digit):
 
 def histo_digits_pi(liste):
     """
-    Argument : dictionnaire_digit :
+    Argument : liste : liste d'entiers.
     Retourne : /
     Effet : Construit un histogramme par rapport au dictionnaire fournit.
 
@@ -90,7 +90,8 @@ def histo_digits_pi(liste):
     plt.title(titre)
     plt.show()
 
+liste = get_pi_decimal()
+dico = occ_number(liste)
+
 if __name__ == "__main__":
-    liste = prendre_pi_decimale()
-    dico = compteur_de_nombre(liste)
     histo_digits_pi(liste)
