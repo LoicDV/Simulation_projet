@@ -75,7 +75,10 @@ def dict_to_list(dictionnaire_digit):
         valeur.append(dictionnaire_digit[element])
     return cle, valeur
 
-def test_chi2(liste):
+liste = get_pi_decimal() #liste des décimales de pi.
+dico = occ_number(liste) #dictionnaire avec les occurences de pi.
+
+def test_chi2(liste, r=max(liste)):
     """
     Argument : liste : liste d'entiers.
     Retourne : /
@@ -85,7 +88,10 @@ def test_chi2(liste):
     """
     titre ="Histogramme sur les décimales de pi en fonction de leur occurence."
     plt.figure()
-    plt.hist(liste, bins=max(liste))
+    if r == -1:
+        plt.hist(liste, bins=1)
+    else:
+        plt.hist(liste, bins=r+1)
     plt.xlabel("Valeur des digits")
     plt.ylabel("Nombre d'occurence")
     plt.title(titre)
@@ -144,7 +150,7 @@ def test_gap(a0, b0):
             compteur += 1
     dictionnaire_occurence = occ_number(liste_gap)
     display_occ(dictionnaire_occurence)
-    test_chi2(liste_gap)
+    test_chi2(liste_gap, max(liste_gap) - 1)
 
 if __name__ == "__main__":
-    test_gap(0, 0.4)
+    test_gap(0.2, 0.6)
