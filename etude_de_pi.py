@@ -89,10 +89,11 @@ def test_chi2(liste):
     plt.xlabel("Valeur des digits")
     plt.ylabel("Nombre d'occurence")
     plt.title(titre)
+    plt.grid()
     plt.show()
 
-liste = get_pi_decimal()
-dico = occ_number(liste)
+liste = get_pi_decimal() #liste des décimales de pi.
+dico = occ_number(liste) #dictionnaire avec les occurences de pi.
 
 def Kr(r, N, proba):
     """
@@ -116,17 +117,34 @@ def testeur():
 
     def moins_chelou():
         return random.randint(0, 10000000000) / 100000000
-    
-    dico = {}
+
+    dictt = {}
     for i in range(0, 10001):
-        dico[(i, i+1)] = 0
+        dictt[(i, i+1)] = 0
 
     for i in range(10000000):
         k = moins_chelou()
-        dico[(math.floor(k), math.floor(k)+1)] += 1
+        dictt[(math.floor(k), math.floor(k)+1)] += 1
 
     for i in range(0, 100):
-        print(str((i, i+1)) + ' ----> ' + str(dico[(i, i+1)]))
+        print(str((i, i+1)) + ' ----> ' + str(dictt[(i, i+1)]))
+
+def test_gap(a0, b0):
+    if (a0 >= b0) or (a0 < 0) or (b0 > 1):
+        raise Exception("a, b have to be in [0, 1].")
+    a = a0 * 10
+    b = b0 * 10
+    liste_gap = [] #liste de n éléments de compteurs.
+    compteur = 0
+    for i in range(len(liste)):
+        if liste[i] >= a and liste[i] <= b:
+            liste_gap.append(compteur)
+            compteur = 0
+        else :
+            compteur += 1
+    dictionnaire_occurence = occ_number(liste_gap)
+    display_occ(dictionnaire_occurence)
+    test_chi2(liste_gap)
 
 if __name__ == "__main__":
-    testeur()
+    test_gap(0, 0.5)
