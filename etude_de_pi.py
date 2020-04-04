@@ -85,7 +85,7 @@ def test_chi2(liste):
     """
     titre ="Histogramme sur les décimales de pi en fonction de leur occurence."
     plt.figure()
-    plt.hist(liste)
+    plt.hist(liste, bins=max(liste))
     plt.xlabel("Valeur des digits")
     plt.ylabel("Nombre d'occurence")
     plt.title(titre)
@@ -147,4 +147,4 @@ def test_gap(a0, b0):
     test_chi2(liste_gap)
 
 if __name__ == "__main__":
-    test_gap(0, 0.5)
+    test_gap(0, 0.4)
