@@ -33,7 +33,7 @@ def test_chi2(r, list_value, dict_value, dict_proba, deg):
             list_win.append((alpha, True))
         else:
             list_win.append((alpha, False))
-    return
+    return list_win
 
 
 
