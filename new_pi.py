@@ -15,6 +15,16 @@ def get_decimal():
                 liste_totale.append(nombre)
     return liste_totale
 
+def occ_number(liste_nombre):
+    dictionnaire_occurence = {}
+    for element in liste_nombre:
+        if element not in dictionnaire_occurence:
+            dictionnaire_occurence[element] = 1
+        else:
+            dictionnaire_occurence[element] += 1
+    return dictionnaire_occurence
+
+
 def Kr(r, N, dict_value, dict_proba):
     kr = 0
     for i in dict_value:
