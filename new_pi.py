@@ -31,11 +31,11 @@ def proba_dict_chi2(r):
         dict_proba[i] = proba
     return dict_proba
 
-def proba_dict_gap(a, b):
+def proba_dict_gap(a, b, dict_value):
     dict_proba = {}
     p = b - a
     for i in dict_value:
-        proba = math.pwr(1 - p, i) * p
+        proba = math.pow(1 - p, i) * p
         dict_proba[i] = proba
     return dict_proba
 
@@ -59,8 +59,23 @@ def test_chi2(r, list_value, dict_value, dict_proba, deg):
             list_win.append((alpha, False))
     return list_win
 
-def test_gap():
-    pass
+def test_gap(a, b, list_value):
+    if (a >= b) or (a < 0) or (b > 1):
+        raise Exception("a, b have to be in [0, 1].")
+    a *= 10
+    b *= 10
+    list_gap = []
+    compt = 0
+    for i in range(len(list_value)):
+        if list_value[i] >= a and list_value[i] <= b:
+            list_gap.append(compt)
+            compt = 0
+        else :
+            compt += 1
+    dict_value = occ_number(list_gap)
+    dict_proba = proba_dict_gap(a, b, dict_value)
+    deg = max(dict_value) - 1
+    return test_chi2(len(dict_value), list_gap, dict_value, dict_proba, deg)
 
 if __name__ == "__main__":
     """
@@ -78,3 +93,7 @@ if __name__ == "__main__":
     """
     TEST DU GAP
     """
+    list_value = get_decimal_pi()
+    a = float(input("Nombres dans [0, 1[ : "))
+    b = float(input("Nombres dans ]0, 1] avec le premier < celui-ci : "))
+    list_final = test_gap(a, b, list_value)
