@@ -8,8 +8,8 @@ def get_decimal_pi():
     liste_totale = []
     with open("pi_decimal.txt") as file:
         for lines in file:
-            for element in lines:
-                if lines[element] is '\n':
+            for element in range(len(lines)):
+                if lines[element] == '\n':
                     break
                 nombre = int(lines[element])
                 liste_totale.append(nombre)
@@ -27,7 +27,7 @@ def occ_number(list_value):
 def proba_dict_chi2(r):
     dict_proba = {}
     proba = 1/r
-    for i in r:
+    for i in range(r):
         dict_proba[i] = proba
     return dict_proba
 
@@ -54,7 +54,11 @@ def test_chi2(r, list_value, dict_value, dict_proba, deg):
             list_win.append((alpha, False))
     return list_win
 
-
-
 if __name__ == "__main__":
-    pass
+    list_value = get_decimal_pi()
+    dict_value = occ_number(list_value)
+    dict_proba = proba_dict_chi2(len(dict_value))
+    r = len(dict_value)
+    deg = r - 1
+    list_final = test_chi2(r, list_value, dict_value, dict_proba, deg)
+    print(list_final)
