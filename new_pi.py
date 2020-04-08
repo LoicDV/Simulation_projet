@@ -33,7 +33,7 @@ def proba_dict_chi2(r):
 
 def proba_dict_gap(a, b, dict_value):
     dict_proba = {}
-    p = b - a
+    p = b - a + 0.1
     for i in dict_value:
         proba = math.pow(1 - p, i) * p
         dict_proba[i] = proba
@@ -50,7 +50,6 @@ def Kr(N, dict_value, dict_proba):
 def test_chi2(r, list_value, dict_value, dict_proba, deg):
     list_win = []
     kr = Kr(len(list_value), dict_value, dict_proba)
-    print(kr)
     list_alpha = [0.001, 0.01, 0.025, 0.05, 0.1]
     for alpha in list_alpha:
         crit_value = scp.chi2.ppf(1-alpha, deg)
@@ -95,9 +94,11 @@ if __name__ == "__main__":
     """
     TEST DU GAP
     """
-
+    """
     list_value = get_decimal_pi()
     a = float(input("Nombres dans [0, 1[ : "))
     b = float(input("Nombres dans ]0, 1] avec le premier < celui-ci : "))
     list_final = test_gap(a, b, list_value)
     print(list_final)
+    # Q. Buys : Problème avec 0-0.9 et 0-1
+    """
