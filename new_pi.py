@@ -54,7 +54,14 @@ def test_chi2(r, list_value, dict_value, dict_proba, deg):
             list_win.append((alpha, False))
     return list_win
 
+def test_gap():
+    pass
+
 if __name__ == "__main__":
+    """
+    TEST DE CHI2
+    """
+    """
     list_value = get_decimal_pi()
     dict_value = occ_number(list_value)
     dict_proba = proba_dict_chi2(len(dict_value))
@@ -62,3 +69,7 @@ if __name__ == "__main__":
     deg = r - 1
     list_final = test_chi2(r, list_value, dict_value, dict_proba, deg)
     print(list_final)
+    """
+    """
+    TEST DU GAP
+    """
