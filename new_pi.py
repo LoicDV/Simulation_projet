@@ -73,7 +73,7 @@ def test_gap(a, b, list_value):
         else :
             compt += 1
     dict_value = occ_number(list_gap)
-    dict_proba = proba_dict_gap(a, b, dict_value)
+    dict_proba = proba_dict_gap(a/10, b/10, dict_value)
     deg = max(dict_value) - 1
     return test_chi2(len(dict_value), list_gap, dict_value, dict_proba, deg)
 
@@ -97,3 +97,4 @@ if __name__ == "__main__":
     a = float(input("Nombres dans [0, 1[ : "))
     b = float(input("Nombres dans ]0, 1] avec le premier < celui-ci : "))
     list_final = test_gap(a, b, list_value)
+    print(list_final)
