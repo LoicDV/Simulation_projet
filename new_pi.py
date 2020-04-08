@@ -50,6 +50,7 @@ def Kr(r, N, dict_value, dict_proba):
 def test_chi2(r, list_value, dict_value, dict_proba, deg):
     list_win = []
     kr = Kr(len(dict_value), len(list_value), dict_value, dict_proba)
+    print(kr)
     list_alpha = [0.001, 0.01, 0.025, 0.05, 0.1]
     for alpha in list_alpha:
         crit_value = scp.chi2.ppf(1-alpha, deg)
@@ -62,23 +63,20 @@ def test_chi2(r, list_value, dict_value, dict_proba, deg):
 def test_gap(a, b, list_value):
     if (a >= b) or (a < 0) or (b > 1):
         raise Exception("a, b have to be in [0, 1].")
-    a *= 10
-    b *= 10
     list_gap = []
     compt = 0
     k = 0
-    while list_value[k] < a or list_value[k] > b:
+    while list_value[k]/10 < a or list_value[k]/10 > b:
         k += 1
-        for i in range(k+1, len(list_value)):
-            if list_value[i] >= a and list_value[i] <= b:
-                list_gap.append(compt)
-                compt = 0
-            else :
-                compt += 1
+    for i in range(k+1, len(list_value)):
+        if list_value[i]/10 >= a and list_value[i]/10 <= b:
+            list_gap.append(compt)
+            compt = 0
+        else :
+            compt += 1
     dict_value = occ_number(list_gap)
-    dict_proba = proba_dict_gap(a/10, b/10, dict_value)
-    deg = len(dict_value)
-    print(list_gap)
+    dict_proba = proba_dict_gap(a, b, dict_value)
+    deg = len(dict_value) - 1
     return test_chi2(len(dict_value), list_gap, dict_value, dict_proba, deg)
 
 if __name__ == "__main__":
