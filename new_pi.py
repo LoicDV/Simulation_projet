@@ -31,8 +31,13 @@ def proba_dict_chi2(r):
         dict_proba[i] = proba
     return dict_proba
 
-def proba_dict_gap():
-    pass
+def proba_dict_gap(a, b):
+    dict_proba = {}
+    p = b - a
+    for i in dict_value:
+        proba = math.pwr(1 - p, i) * p
+        dict_proba[i] = proba
+    return dict_proba
 
 def Kr(r, N, dict_value, dict_proba):
     kr = 0
