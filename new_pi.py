@@ -24,7 +24,14 @@ def occ_number(list_value):
             dict_occ[element] += 1
     return dict_occ
 
-def proba_dict():
+def proba_dict_chi2(r):
+    dict_proba = {}
+    proba = 1/r
+    for i in r:
+        dict_proba[i] = proba
+    return dict_proba
+
+def proba_dict_gap():
     pass
 
 def Kr(r, N, dict_value, dict_proba):
