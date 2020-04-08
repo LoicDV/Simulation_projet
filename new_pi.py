@@ -66,15 +66,19 @@ def test_gap(a, b, list_value):
     b *= 10
     list_gap = []
     compt = 0
-    for i in range(len(list_value)):
-        if list_value[i] >= a and list_value[i] <= b:
-            list_gap.append(compt)
-            compt = 0
-        else :
-            compt += 1
+    k = 0
+    while list_value[k] < a or list_value[k] > b:
+        k += 1
+        for i in range(k+1, len(list_value)):
+            if list_value[i] >= a and list_value[i] <= b:
+                list_gap.append(compt)
+                compt = 0
+            else :
+                compt += 1
     dict_value = occ_number(list_gap)
     dict_proba = proba_dict_gap(a/10, b/10, dict_value)
-    deg = max(dict_value) - 1
+    deg = len(dict_value)
+    print(list_gap)
     return test_chi2(len(dict_value), list_gap, dict_value, dict_proba, deg)
 
 if __name__ == "__main__":
