@@ -39,7 +39,7 @@ def proba_dict_gap(a, b, dict_value):
         dict_proba[i] = proba
     return dict_proba
 
-def Kr(r, N, dict_value, dict_proba):
+def Kr(N, dict_value, dict_proba):
     kr = 0
     for i in dict_value:
         ni = dict_value[i]
@@ -49,7 +49,7 @@ def Kr(r, N, dict_value, dict_proba):
 
 def test_chi2(r, list_value, dict_value, dict_proba, deg):
     list_win = []
-    kr = Kr(len(dict_value), len(list_value), dict_value, dict_proba)
+    kr = Kr(len(list_value), dict_value, dict_proba)
     print(kr)
     list_alpha = [0.001, 0.01, 0.025, 0.05, 0.1]
     for alpha in list_alpha:
@@ -95,6 +95,7 @@ if __name__ == "__main__":
     """
     TEST DU GAP
     """
+
     list_value = get_decimal_pi()
     a = float(input("Nombres dans [0, 1[ : "))
     b = float(input("Nombres dans ]0, 1] avec le premier < celui-ci : "))
