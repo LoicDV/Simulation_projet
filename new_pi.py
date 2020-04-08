@@ -33,7 +33,7 @@ def proba_dict_chi2(r):
 
 def proba_dict_gap(a, b, dict_value):
     dict_proba = {}
-    p = b - a + 0.1
+    p = math.floor(10*b)/10 - math.ceil(10*a)/10 + 0.1
     for i in dict_value:
         proba = math.pow(1 - p, i) * p
         dict_proba[i] = proba
@@ -106,11 +106,10 @@ if __name__ == "__main__":
     """
 
     list_value = get_decimal_pi()
-    a = float(input("a dans [0, 0.9[ : "))
-    b = float(input("b dans ]0, 0.9] avec a < b : "))
+    a = float(input("a dans [0, 1[ : "))
+    b = float(input("b dans ]0, 1] avec a < b : "))
     list_final = test_gap(a, b, list_value)
     print(list_final)
-    # Q. Buys : Problème avec 0-0.9 et 0-1
 
     """
     TEST DU POKER
