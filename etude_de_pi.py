@@ -117,24 +117,6 @@ def Kr(r, N, proba):
         sol += math.pow((n_i - N * proba) / math.sqrt(N * proba), 2)
     return sol
 
-def testeur():
-    import random
-    import math
-
-    def moins_chelou():
-        return random.randint(0, 10000000000) / 100000000
-
-    dictt = {}
-    for i in range(0, 10001):
-        dictt[(i, i+1)] = 0
-
-    for i in range(10000000):
-        k = moins_chelou()
-        dictt[(math.floor(k), math.floor(k)+1)] += 1
-
-    for i in range(0, 100):
-        print(str((i, i+1)) + ' ----> ' + str(dictt[(i, i+1)]))
-
 def test_gap(a0, b0):
     if (a0 >= b0) or (a0 < 0) or (b0 > 1):
         raise Exception("a, b have to be in [0, 1].")
