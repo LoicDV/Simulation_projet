@@ -63,11 +63,11 @@ def test_chi2(r, list_value, dict_value, dict_proba, deg):
 def test_gap(a, b, list_value):
     if (a >= b) or (a < 0) or (b > 1):
         raise Exception("a, b have to be in [0, 1].")
-    list_gap = []
-    compt = 0
     k = 0
     while list_value[k]/10 < a or list_value[k]/10 > b:
         k += 1
+    list_gap = []
+    compt = 0
     for i in range(k+1, len(list_value)):
         if list_value[i]/10 >= a and list_value[i]/10 <= b:
             list_gap.append(compt)
