@@ -4,7 +4,7 @@ import operator
 import math
 import scipy.stats as scp
 
-def get_decimal():
+def get_decimal_pi():
     liste_totale = []
     with open("pi_decimal.txt") as file:
         for lines in file:
@@ -15,15 +15,17 @@ def get_decimal():
                 liste_totale.append(nombre)
     return liste_totale
 
-def occ_number(liste_nombre):
-    dictionnaire_occurence = {}
-    for element in liste_nombre:
-        if element not in dictionnaire_occurence:
-            dictionnaire_occurence[element] = 1
+def occ_number(list_value):
+    dict_occ = {}
+    for element in list_value:
+        if element not in dict_occ:
+            dict_occ[element] = 1
         else:
-            dictionnaire_occurence[element] += 1
-    return dictionnaire_occurence
+            dict_occ[element] += 1
+    return dict_occ
 
+def proba_dict():
+    pass
 
 def Kr(r, N, dict_value, dict_proba):
     kr = 0
