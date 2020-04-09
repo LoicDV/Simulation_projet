@@ -39,8 +39,16 @@ def proba_dict_gap(a, b, dict_value):
         dict_proba[i] = proba
     return dict_proba
 
-def proba_dict_poker():
-    pass
+def proba_dict_poker(k, r, d):
+    dict_proba = {}
+    dict_stir = {}
+    for i in range(r):
+        tmp = d
+        stirling = stirling_number(dict_stir, k, i)
+        while tmp >= d-i+1:
+            stirling *= tmp
+        stirling /= d**k
+        dict_proba[(k, i)] = stirling
 
 def stirling_number(dict_stir, k, r):
     if (k, r) in dict_stir:
@@ -112,8 +120,8 @@ def test_gap(a, b, list_value):
     deg = len(dict_value) - 1
     return test_chi2(len(dict_value), list_gap, dict_value, dict_proba, deg)
 
-    def test_poker():
-        pass
+def test_poker():
+    pass
 
 if __name__ == "__main__":
     """
