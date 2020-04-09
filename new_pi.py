@@ -39,6 +39,26 @@ def proba_dict_gap(a, b, dict_value):
         dict_proba[i] = proba
     return dict_proba
 
+def proba_dict_poker():
+    pass
+
+def stirling_number(dict_stir, k, r):
+    if (k, r) in dict_stir:
+        return dict_stir[(k, r)]
+    elif r == 1:
+        dict_stir[(k, 1)] = 1
+        return 1
+    elif k == r:
+        dict_stir[(k, r)] = 1
+        return 1
+    stirling = stirling_number(dict_stir, k-1, r-1) + r * stirling_number(dict_stir, k-1, r)
+    dict_stir[(k, r)] = stirling
+    return stirling
+
+def poss_poker():
+    pass
+
+
 def Kr(N, dict_value, dict_proba):
     kr = 0
     for i in dict_value:
@@ -50,9 +70,6 @@ def Kr(N, dict_value, dict_proba):
 def test_chi2(r, list_value, dict_value, dict_proba, deg):
     list_win = []
     kr = Kr(len(list_value), dict_value, dict_proba)
-    print("kr")
-    print(kr)
-    print("--------------------------------")
     list_alpha = [0.001, 0.01, 0.025, 0.05, 0.1]
     for alpha in list_alpha:
         crit_value = scp.chi2.ppf(1-alpha, deg)
@@ -77,16 +94,12 @@ def test_gap(a, b, list_value):
         else :
             compt += 1
     dict_value = occ_number(list_gap)
-    print("--------------------------------")
-    print("dict_value")
-    print(dict_value)
-    print("--------------------------------")
     dict_proba = proba_dict_gap(a, b, dict_value)
-    print("dict_proba")
-    print(dict_proba)
-    print("--------------------------------")
     deg = len(dict_value) - 1
     return test_chi2(len(dict_value), list_gap, dict_value, dict_proba, deg)
+
+    def test_poker():
+        pass
 
 if __name__ == "__main__":
     """
@@ -104,13 +117,13 @@ if __name__ == "__main__":
     """
     TEST DU GAP
     """
-
+    """
     list_value = get_decimal_pi()
     a = float(input("a dans [0, 1[ : "))
     b = float(input("b dans ]0, 1] avec a < b : "))
     list_final = test_gap(a, b, list_value)
     print(list_final)
-
+    """
     """
     TEST DU POKER
     """
