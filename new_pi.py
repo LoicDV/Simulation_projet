@@ -55,8 +55,22 @@ def stirling_number(dict_stir, k, r):
     dict_stir[(k, r)] = stirling
     return stirling
 
-def poss_poker():
-    pass
+def poss_poker(list_value):
+    dict_occ = occ_number(list_value)
+    if len(dict_occ) == 1:
+        return "Poker"
+    elif len(dict_occ) == 2:
+        if dict_occ[list_value[0]] == 3 or dict_occ[list_value[0]] == 2:
+            return "Full"
+        return "Carré"
+    elif len(dict_occ) == 3:
+        for elem in dict_occ:
+            if dict_occ[elem] == 3:
+                return "Brelan"
+        return "Double pair"
+    elif len(dict_occ) == 4:
+        return "Pair"
+    return "Rien"
 
 
 def Kr(N, dict_value, dict_proba):
