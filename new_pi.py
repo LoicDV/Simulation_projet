@@ -49,6 +49,7 @@ def proba_dict_poker(k, r, d):
             stirling *= tmp
         stirling /= d**k
         dict_proba[(k, i)] = stirling
+    return dict_proba
 
 def stirling_number(dict_stir, k, r):
     if (k, r) in dict_stir:
@@ -120,8 +121,19 @@ def test_gap(a, b, list_value):
     deg = len(dict_value) - 1
     return test_chi2(len(dict_value), list_gap, dict_value, dict_proba, deg)
 
-def test_poker():
-    pass
+def test_poker(list_value, k=5, d=10):
+    r =
+    dict_proba = proba_dict_poker(k, r, d)
+    list_poker = []
+    list_test_poker = []
+    for elem in list_value:
+        list_test_poker.append(list_value[elem])
+        if len(list_test_poker) == 5:
+            string = poss_poker(list_test_poker)
+            list_poker.append(string)
+            list_test_poker = []
+    dict_value = occ_number(list_poker)
+    return test_chi2(r, list_poker, dict_value, dict_proba, 3)
 
 if __name__ == "__main__":
     """
@@ -149,3 +161,6 @@ if __name__ == "__main__":
     """
     TEST DU POKER
     """
+    list_value = get_decimal_pi()
+    list_final = test_poker(list_value)
+    print(list_final)
