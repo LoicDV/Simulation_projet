@@ -67,33 +67,6 @@ def stirling_number(dict_stir, k, r):
     dict_stir[(k, r)] = stirling
     return stirling
 
-def poss_poker(list_value):
-    """
-    Poker = 1
-    Carré = 2
-    Full = 2
-    Brelan = 3
-    Double pair = 3
-    Pair = 4
-    Rien = 5
-    """
-    dict_occ = occ_number(list_value)
-    if len(dict_occ) == 1:
-        return 1
-    elif len(dict_occ) == 2:
-        if dict_occ[list_value[0]] == 3 or dict_occ[list_value[0]] == 2:
-            return 2
-        return 2
-    elif len(dict_occ) == 3:
-        for elem in dict_occ:
-            if dict_occ[elem] == 3:
-                return 3
-        return 3
-    elif len(dict_occ) == 4:
-        return 4
-    return 5
-
-
 def Kr(N, dict_value, dict_proba):
     kr = 0
     for i in dict_value:
@@ -138,18 +111,12 @@ def test_poker(list_value, k=5, d=10):
     list_poker = []
     list_test_poker = []
     for elem in list_value:
-        list_test_poker.append(list_value[elem])
-        if len(list_test_poker) == 5:
-            string = poss_poker(list_test_poker)
-            list_poker.append(string)
+        list_test_poker.append(elem)
+        if len(list_test_poker) == k:
+            number = len(occ_number(list_test_poker))
+            list_poker.append(number)
             list_test_poker = []
     dict_value = occ_number(list_poker)
-    print("dict_value")
-    print(dict_value)
-    print("------------------------------------")
-    print("dict_proba")
-    print(dict_proba)
-    print("------------------------------------")
     return test_chi2(d, list_poker, dict_value, dict_proba, d-1)
 
 if __name__ == "__main__":
@@ -178,7 +145,8 @@ if __name__ == "__main__":
     """
     TEST DU POKER
     """
-
+    """
     list_value = get_decimal_pi()
     list_final = test_poker(list_value)
     print(list_final)
+    """
