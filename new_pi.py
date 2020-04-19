@@ -39,21 +39,22 @@ def proba_dict_gap(a, b, dict_value):
         dict_proba[i] = proba
     return dict_proba
 
-def proba_dict_poker(k, r, d):
+def proba_dict_poker(k, d):
     dict_proba = {}
     dict_stir = {}
-    for i in range(d):
+    for i in range(1, d):
         tmp = d
         stirling = stirling_number(dict_stir, k, i)
         while tmp >= d-i+1:
             stirling *= tmp
+            tmp -= 1
         stirling /= d**k
-        dict_proba[(k, i)] = stirling
+        dict_proba[i] = stirling
     return dict_proba
 
 def stirling_number(dict_stir, k, r):
     if k < r:
-        return Exception("Impossible car ce nombre n'existe pas.")
+        dict_stir[(k, r)] = 0
     if (k, r) in dict_stir:
         return dict_stir[(k, r)]
     elif r == 1:
@@ -67,21 +68,30 @@ def stirling_number(dict_stir, k, r):
     return stirling
 
 def poss_poker(list_value):
+    """
+    Poker = 1
+    Carré = 2
+    Full = 2
+    Brelan = 3
+    Double pair = 3
+    Pair = 4
+    Rien = 5
+    """
     dict_occ = occ_number(list_value)
     if len(dict_occ) == 1:
-        return "Poker"
+        return 1
     elif len(dict_occ) == 2:
         if dict_occ[list_value[0]] == 3 or dict_occ[list_value[0]] == 2:
-            return "Full"
-        return "Carré"
+            return 2
+        return 2
     elif len(dict_occ) == 3:
         for elem in dict_occ:
             if dict_occ[elem] == 3:
-                return "Brelan"
-        return "Double pair"
+                return 3
+        return 3
     elif len(dict_occ) == 4:
-        return "Pair"
-    return "Rien"
+        return 4
+    return 5
 
 
 def Kr(N, dict_value, dict_proba):
@@ -122,10 +132,9 @@ def test_gap(a, b, list_value):
     dict_proba = proba_dict_gap(a, b, dict_value)
     deg = len(dict_value) - 1
     return test_chi2(len(dict_value), list_gap, dict_value, dict_proba, deg)
-"""
+
 def test_poker(list_value, k=5, d=10):
-    r =
-    dict_proba = proba_dict_poker(k, r, d)
+    dict_proba = proba_dict_poker(k, d)
     list_poker = []
     list_test_poker = []
     for elem in list_value:
@@ -135,8 +144,14 @@ def test_poker(list_value, k=5, d=10):
             list_poker.append(string)
             list_test_poker = []
     dict_value = occ_number(list_poker)
-    return test_chi2(r, list_poker, dict_value, dict_proba, 3)
-"""
+    print("dict_value")
+    print(dict_value)
+    print("------------------------------------")
+    print("dict_proba")
+    print(dict_proba)
+    print("------------------------------------")
+    return test_chi2(d, list_poker, dict_value, dict_proba, d-1)
+
 if __name__ == "__main__":
     """
     TEST DE CHI2
@@ -163,4 +178,7 @@ if __name__ == "__main__":
     """
     TEST DU POKER
     """
-    pass
+
+    list_value = get_decimal_pi()
+    list_final = test_poker(list_value)
+    print(list_final)
