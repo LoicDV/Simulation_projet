@@ -23,35 +23,46 @@ def generator_random(decimal_number):
     return number
 
 if __name__ == "__main__":
-    n = 3
+    with open ('test.txt', 'w') as f:
+        for ___ in range(1, 101):
+            print("test " + str(___) + ":" )
+            n = 3
 
-    list_test_us = []
-    list_test_util_us = []
-    for __ in range(1000000):
-        number = randFloat(n)
-        list_test_us.append(number)
-        number *= (10**n)
-        list_test_util_us.append(number)
-    dict_test_us = pi.occ_number(list_test_util_us)
-
-    list_test_random = []
-    list_test_util_random = []
-    for __ in range(1000000):
-        number = generator_random(n)
-        list_test_random.append(number)
-        number *= (10**n)
-        list_test_util_random.append(int(number))
-    dict_test_random = pi.occ_number(list_test_util_random)
-
-    print("Test de Chi2")
-    print("-----------------------------------------------------")
-    print("Notre générateur :")
-    dict_proba_chi2_us = pi.proba_dict_chi2(len(dict_test_us))
-    list_final_chi2_us = pi.test_chi2(len(list_test_us), list_test_us, dict_test_us, dict_proba_chi2_us, len(dict_test_us)-1)
-    print(list_final_chi2_us)
-    print("-----------------------------------------------------")
-    print("Random :")
-    dict_proba_chi2_random = pi.proba_dict_chi2(len(dict_test_random))
-    list_final_chi2_random = pi.test_chi2(len(list_test_random), list_test_random, dict_test_random, dict_proba_chi2_random, len(dict_test_random)-1)
-    print(list_final_chi2_random)
-    print("-----------------------------------------------------")
+            list_test_us = []
+            list_test_util_us = []
+            for __ in range(1000):
+                number = randFloat(n)
+                list_test_us.append(number)
+                number *= (10**n)
+                list_test_util_us.append(int(number))
+            dict_test_us = pi.occ_number(list_test_util_us)
+            """
+            list_test_random = []
+            list_test_util_random = []
+            for __ in range(1000):
+                number = generator_random(n)
+                list_test_random.append(number)
+                number *= (10**n)
+                list_test_util_random.append(int(number))
+            dict_test_random = pi.occ_number(list_test_util_random)
+            """
+            """Test de Chi2"""
+            """Notre générateur :"""
+            dict_proba_chi2_us = pi.proba_dict_chi2(len(dict_test_us), dict_test_us)
+            list_final_chi2_us = pi.test_chi2(len(list_test_us), list_test_us, dict_test_us, dict_proba_chi2_us, len(dict_test_us)-1)
+            f.write("Test de Chi2" + '\n')
+            f.write("Notre générateur :" + '\n')
+            string = "".join(str(elem) for elem in list_final_chi2_us)
+            f.write(string + '\n')
+            """-----------------------------------------------------"""
+            """Random :"""
+            """
+            dict_proba_chi2_random = pi.proba_dict_chi2(len(dict_test_random), dict_test_random)
+            list_final_chi2_random = pi.test_chi2(len(list_test_random), list_test_random, dict_test_random, dict_proba_chi2_random, len(dict_test_random)-1)
+            f.write("Test de Chi2" + '\n')
+            f.write("random de python :" + '\n')
+            string = "".join(str(elem) for elem in list_final_chi2_random)
+            f.write(string + '\n')
+            """
+            """-----------------------------------------------------"""
+            """-----------------------------------------------------"""

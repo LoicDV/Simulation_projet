@@ -1,0 +1,300 @@
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
