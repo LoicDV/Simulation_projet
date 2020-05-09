@@ -1,5 +1,6 @@
 import new_pi as pi
 import datetime
+import random
 
 list_value = pi.get_decimal_pi()
 
@@ -16,22 +17,30 @@ def randFloat(decimal_number):
     return our_float
 
 if __name__ == "__main__":
-    """
-    for __ in range(5):
-        list_test = []
-        for _ in range(1000000):
-            number = randFloat(3)
-            list_test.append(number)
-        dict_test = pi.occ_number(list_test)
-        maxi = dict_test[0]
-        mini = dict_test[0]
-        for elem in dict_test:
-            if maxi < dict_test[elem]:
-                maxi = dict_test[elem]
-            if mini > dict_test[elem]:
-                mini = dict_test[elem]
-        print(maxi)
-        print(mini)
-        print("--------")
-    """
-    pass
+    list_test_us = []
+    for _ in range(1000000):
+        number = randFloat(3)
+        list_test_us.append(number)
+    dict_test_us = pi.occ_number(list_test_us)
+
+    list_test_random = []
+    for _ in range(1000000):
+        number = random.random()
+        list_test_random.append(number)
+    dict_test_random = pi.occ_number(list_test_random)
+
+    print(len(list_test_us))
+    print(len(list_test_random))
+    print("Test de Chi2")
+    dict_proba_chi2_us = pi.proba_dict_chi2(len(list_test_us))
+    list_final_chi2_us = pi.test_chi2(len(list_test_us), list_test_us, dict_test_us, dict_proba_chi2_us, len(list_test_us)-1)
+    dict_proba_chi2_random = pi.proba_dict_chi2(len(list_test_random))
+    list_final_chi2_random = pi.test_chi2(len(list_test_random), list_test_random, dict_test_random, dict_proba_chi2_random, len(list_test_random)-1)
+    print("-----------------------------------------------------")
+    print("Notre générateur :")
+    print(list_final_chi2_us)
+    print("-----------------------------------------------------")
+    print("Random :")
+    print(list_final_chi2_random)
+    print("-----------------------------------------------------")
+    print("-----------------------------------------------------")
