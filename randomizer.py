@@ -1,6 +1,7 @@
 import new_pi as pi
 import datetime
 import random
+import math
 
 list_value = pi.get_decimal_pi()
 
@@ -8,8 +9,8 @@ def randFloat(decimal_number):
     floating = ""
     for i in range(decimal_number):
         time = datetime.datetime.now().microsecond
-        digit = (time*36170)%(2**20)
-        index = digit/(2**20)
+        digit = (time*36170)%(2**32)
+        index = digit/(2**32)
         index *= 1000000
         digit_result = list_value[int(index)]
         floating += str(digit_result)
@@ -18,9 +19,8 @@ def randFloat(decimal_number):
 
 def generator_random(decimal_number):
     number = random.random()
-    limit = '.' + str(decimal_number)
-    decimal = format(number, limit)
-    return float(decimal)
+    number = math.floor(number*(10**decimal_number))/(10**decimal_number)
+    return number
 
 if __name__ == "__main__":
     n = 3
@@ -44,14 +44,14 @@ if __name__ == "__main__":
     dict_test_random = pi.occ_number(list_test_util_random)
 
     print("Test de Chi2")
-    dict_proba_chi2_us = pi.proba_dict_chi2(len(list_test_us))
-    list_final_chi2_us = pi.test_chi2(len(list_test_us), list_test_us, dict_test_us, dict_proba_chi2_us, len(list_test_us)-1)
-    dict_proba_chi2_random = pi.proba_dict_chi2(len(list_test_random))
-    list_final_chi2_random = pi.test_chi2(len(list_test_random), list_test_random, dict_test_random, dict_proba_chi2_random, len(list_test_random)-1)
     print("-----------------------------------------------------")
     print("Notre générateur :")
+    dict_proba_chi2_us = pi.proba_dict_chi2(len(dict_test_us))
+    list_final_chi2_us = pi.test_chi2(len(list_test_us), list_test_us, dict_test_us, dict_proba_chi2_us, len(dict_test_us)-1)
     print(list_final_chi2_us)
     print("-----------------------------------------------------")
     print("Random :")
+    dict_proba_chi2_random = pi.proba_dict_chi2(len(dict_test_random))
+    list_final_chi2_random = pi.test_chi2(len(list_test_random), list_test_random, dict_test_random, dict_proba_chi2_random, len(dict_test_random)-1)
     print(list_final_chi2_random)
     print("-----------------------------------------------------")
