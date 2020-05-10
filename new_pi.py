@@ -88,12 +88,12 @@ def test_gap(a, b, list_value):
     if (a >= b) or (a < 0) or (b > 0.9):
         raise Exception("a, b have to be in [0, 0.9].")
     k = 0
-    while list_value[k]/10 < a or list_value[k]/10 > b:
+    while list_value[k] < a or list_value[k] > b:
         k += 1
     list_gap = []
     compt = 0
     for i in range(k+1, len(list_value)):
-        if list_value[i]/10 >= a and list_value[i]/10 <= b:
+        if list_value[i] >= a and list_value[i] <= b:
             list_gap.append(compt)
             compt = 0
         else :
@@ -134,6 +134,8 @@ if __name__ == "__main__":
     """
     """
     list_value = get_decimal_pi()
+    for i in range(len(list_value)):
+        list_value[i] /= 10
     a = float(input("a dans [0, 1[ : "))
     b = float(input("b dans ]0, 1] avec a < b : "))
     list_final = test_gap(a, b, list_value)

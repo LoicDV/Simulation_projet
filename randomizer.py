@@ -26,11 +26,11 @@ if __name__ == "__main__":
     with open ('test.txt', 'w') as f:
         for ___ in range(1, 101):
             print("test " + str(___) + ":" )
-            n = 3
+            n = 5
 
             list_test_us = []
             list_test_util_us = []
-            for __ in range(1000):
+            for __ in range(1000000):
                 number = randFloat(n)
                 list_test_us.append(number)
                 number *= (10**n)
@@ -52,6 +52,8 @@ if __name__ == "__main__":
             list_final_chi2_us = pi.test_chi2(len(list_test_us), list_test_us, dict_test_us, dict_proba_chi2_us, len(dict_test_us)-1)
             f.write("Test de Chi2" + '\n')
             f.write("Notre générateur :" + '\n')
+            kr = pi.Kr(len(list_test_us), dict_test_us, dict_proba_chi2_us)
+            f.write(str(kr) + '\n')
             string = "".join(str(elem) for elem in list_final_chi2_us)
             f.write(string + '\n')
             """-----------------------------------------------------"""
