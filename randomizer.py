@@ -77,12 +77,14 @@ if __name__ == "__main__":
             a = float(input("a dans [0, 1[ : "))
             b = float(input("b dans ]0, 1] avec a < b : "))
             list_final_gap_us = pi.test_gap(a, b, list_test_us)
-            print(list_final_gap_us)
+            string = "".join(str(elem) for elem in list_final_gap_us)
+            f.write(string + '\n')
             """
             """ Random :"""
             """
             list_final_gap_random = pi.test_gap(a, b, list_test_random)
-            print(list_final_gap_random)
+            string = "".join(str(elem) for elem in list_final_gap_random)
+            f.write(string + '\n')
             """
             """-----------------------------------------------------"""
             """-----------------------------------------------------"""
@@ -90,9 +92,11 @@ if __name__ == "__main__":
             """ Notre générateur :"""
             """
             list_final_poker_us = pi.test_poker(list_test_util_us)
-            print(list_final_poker_us)
+            string = "".join(str(elem) for elem in list_final_poker_us)
+            f.write(string + '\n')
             """
             """ Random :"""
 
             list_final_poker_random = pi.test_poker(list_test_util_random)
-            print(list_final_poker_random)
+            string = "".join(str(elem) for elem in list_final_poker_random)
+            f.write(string + '\n')

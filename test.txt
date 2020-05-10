@@ -1,0 +1,1 @@
+(0.001, False)(0.01, False)(0.025, False)(0.05, False)(0.1, False)
