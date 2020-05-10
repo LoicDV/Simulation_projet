@@ -69,7 +69,7 @@ def Kr(N, dict_value, dict_proba):
     for i in dict_value:
         ni = dict_value[i]
         pi = dict_proba[i]
-        kr += math.pow((ni - N*pi)/math.sqrt(N*pi), 2)
+        kr += math.pow(ni - N*pi, 2)/(N*pi)
     return kr
 
 def test_chi2(r, list_value, dict_value, dict_proba, deg):
@@ -79,7 +79,6 @@ def test_chi2(r, list_value, dict_value, dict_proba, deg):
     list_alpha = [0.001, 0.01, 0.025, 0.05, 0.1]
     for alpha in list_alpha:
         crit_value = scp.chi2.ppf(1-alpha, deg)
-        print(crit_value)
         if kr < crit_value:
             list_win.append((alpha, True))
         else:

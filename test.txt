@@ -1,1 +1,600 @@
+test 1: avec 300000 nombres générés et 3 décimales.
+Test de Chi2
+Notre générateur :
 (0.001, False)(0.01, False)(0.025, False)(0.05, False)(0.1, False)
+random de python :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+test 2: avec 300000 nombres générés et 3 décimales.
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+random de python :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+test 3: avec 300000 nombres générés et 3 décimales.
+Test de Chi2
+Notre générateur :
+(0.001, False)(0.01, False)(0.025, False)(0.05, False)(0.1, False)
+random de python :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+test 4: avec 300000 nombres générés et 3 décimales.
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, False)(0.025, False)(0.05, False)(0.1, False)
+random de python :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+test 5: avec 300000 nombres générés et 3 décimales.
+Test de Chi2
+Notre générateur :
+(0.001, False)(0.01, False)(0.025, False)(0.05, False)(0.1, False)
+random de python :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+test 6: avec 300000 nombres générés et 3 décimales.
+Test de Chi2
+Notre générateur :
+(0.001, False)(0.01, False)(0.025, False)(0.05, False)(0.1, False)
+random de python :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+test 7: avec 300000 nombres générés et 3 décimales.
+Test de Chi2
+Notre générateur :
+(0.001, False)(0.01, False)(0.025, False)(0.05, False)(0.1, False)
+random de python :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+test 8: avec 300000 nombres générés et 3 décimales.
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, False)(0.025, False)(0.05, False)(0.1, False)
+random de python :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+test 9: avec 300000 nombres générés et 3 décimales.
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, False)(0.025, False)(0.05, False)(0.1, False)
+random de python :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+test 10: avec 300000 nombres générés et 3 décimales.
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, False)(0.025, False)(0.05, False)(0.1, False)
+random de python :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+test 11: avec 300000 nombres générés et 3 décimales.
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, False)(0.025, False)(0.05, False)(0.1, False)
+random de python :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+test 12: avec 300000 nombres générés et 3 décimales.
+Test de Chi2
+Notre générateur :
+(0.001, False)(0.01, False)(0.025, False)(0.05, False)(0.1, False)
+random de python :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+test 13: avec 300000 nombres générés et 3 décimales.
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, False)(0.025, False)(0.05, False)(0.1, False)
+random de python :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+test 14: avec 300000 nombres générés et 3 décimales.
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, False)
+random de python :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+test 15: avec 300000 nombres générés et 3 décimales.
+Test de Chi2
+Notre générateur :
+(0.001, False)(0.01, False)(0.025, False)(0.05, False)(0.1, False)
+random de python :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+test 16: avec 300000 nombres générés et 3 décimales.
+Test de Chi2
+Notre générateur :
+(0.001, False)(0.01, False)(0.025, False)(0.05, False)(0.1, False)
+random de python :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+test 17: avec 300000 nombres générés et 3 décimales.
+Test de Chi2
+Notre générateur :
+(0.001, False)(0.01, False)(0.025, False)(0.05, False)(0.1, False)
+random de python :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+test 18: avec 300000 nombres générés et 3 décimales.
+Test de Chi2
+Notre générateur :
+(0.001, False)(0.01, False)(0.025, False)(0.05, False)(0.1, False)
+random de python :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+test 19: avec 300000 nombres générés et 3 décimales.
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, False)(0.05, False)(0.1, False)
+random de python :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+test 20: avec 300000 nombres générés et 3 décimales.
+Test de Chi2
+Notre générateur :
+(0.001, False)(0.01, False)(0.025, False)(0.05, False)(0.1, False)
+random de python :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+test 21: avec 300000 nombres générés et 3 décimales.
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, False)(0.025, False)(0.05, False)(0.1, False)
+random de python :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+test 22: avec 300000 nombres générés et 3 décimales.
+Test de Chi2
+Notre générateur :
+(0.001, False)(0.01, False)(0.025, False)(0.05, False)(0.1, False)
+random de python :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+test 23: avec 300000 nombres générés et 3 décimales.
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, False)
+random de python :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+test 24: avec 300000 nombres générés et 3 décimales.
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, False)(0.05, False)(0.1, False)
+random de python :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+test 25: avec 300000 nombres générés et 3 décimales.
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, False)(0.025, False)(0.05, False)(0.1, False)
+random de python :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+test 26: avec 300000 nombres générés et 3 décimales.
+Test de Chi2
+Notre générateur :
+(0.001, False)(0.01, False)(0.025, False)(0.05, False)(0.1, False)
+random de python :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+test 27: avec 300000 nombres générés et 3 décimales.
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, False)(0.025, False)(0.05, False)(0.1, False)
+random de python :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+test 28: avec 300000 nombres générés et 3 décimales.
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, False)(0.025, False)(0.05, False)(0.1, False)
+random de python :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+test 29: avec 300000 nombres générés et 3 décimales.
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, False)(0.05, False)(0.1, False)
+random de python :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+test 30: avec 300000 nombres générés et 3 décimales.
+Test de Chi2
+Notre générateur :
+(0.001, False)(0.01, False)(0.025, False)(0.05, False)(0.1, False)
+random de python :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+test 31: avec 300000 nombres générés et 3 décimales.
+Test de Chi2
+Notre générateur :
+(0.001, False)(0.01, False)(0.025, False)(0.05, False)(0.1, False)
+random de python :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+test 32: avec 300000 nombres générés et 3 décimales.
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, False)(0.025, False)(0.05, False)(0.1, False)
+random de python :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+test 33: avec 300000 nombres générés et 3 décimales.
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, False)(0.025, False)(0.05, False)(0.1, False)
+random de python :
+(0.001, True)(0.01, True)(0.025, True)(0.05, False)(0.1, False)
+test 34: avec 300000 nombres générés et 3 décimales.
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, False)(0.1, False)
+random de python :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+test 35: avec 300000 nombres générés et 3 décimales.
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, False)(0.025, False)(0.05, False)(0.1, False)
+random de python :
+(0.001, True)(0.01, True)(0.025, True)(0.05, False)(0.1, False)
+test 36: avec 300000 nombres générés et 3 décimales.
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, False)(0.05, False)(0.1, False)
+random de python :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+test 37: avec 300000 nombres générés et 3 décimales.
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, False)(0.025, False)(0.05, False)(0.1, False)
+random de python :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+test 38: avec 300000 nombres générés et 3 décimales.
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, False)(0.05, False)(0.1, False)
+random de python :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+test 39: avec 300000 nombres générés et 3 décimales.
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, False)(0.025, False)(0.05, False)(0.1, False)
+random de python :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+test 40: avec 300000 nombres générés et 3 décimales.
+Test de Chi2
+Notre générateur :
+(0.001, False)(0.01, False)(0.025, False)(0.05, False)(0.1, False)
+random de python :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+test 41: avec 300000 nombres générés et 3 décimales.
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, False)(0.025, False)(0.05, False)(0.1, False)
+random de python :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+test 42: avec 300000 nombres générés et 3 décimales.
+Test de Chi2
+Notre générateur :
+(0.001, False)(0.01, False)(0.025, False)(0.05, False)(0.1, False)
+random de python :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+test 43: avec 300000 nombres générés et 3 décimales.
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, False)(0.025, False)(0.05, False)(0.1, False)
+random de python :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+test 44: avec 300000 nombres générés et 3 décimales.
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, False)
+random de python :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+test 45: avec 300000 nombres générés et 3 décimales.
+Test de Chi2
+Notre générateur :
+(0.001, False)(0.01, False)(0.025, False)(0.05, False)(0.1, False)
+random de python :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+test 46: avec 300000 nombres générés et 3 décimales.
+Test de Chi2
+Notre générateur :
+(0.001, False)(0.01, False)(0.025, False)(0.05, False)(0.1, False)
+random de python :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+test 47: avec 300000 nombres générés et 3 décimales.
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, False)(0.025, False)(0.05, False)(0.1, False)
+random de python :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+test 48: avec 300000 nombres générés et 3 décimales.
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, False)(0.025, False)(0.05, False)(0.1, False)
+random de python :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, False)
+test 49: avec 300000 nombres générés et 3 décimales.
+Test de Chi2
+Notre générateur :
+(0.001, False)(0.01, False)(0.025, False)(0.05, False)(0.1, False)
+random de python :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, False)
+test 50: avec 300000 nombres générés et 3 décimales.
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, False)(0.1, False)
+random de python :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+test 51: avec 300000 nombres générés et 3 décimales.
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, False)(0.025, False)(0.05, False)(0.1, False)
+random de python :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+test 52: avec 300000 nombres générés et 3 décimales.
+Test de Chi2
+Notre générateur :
+(0.001, False)(0.01, False)(0.025, False)(0.05, False)(0.1, False)
+random de python :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+test 53: avec 300000 nombres générés et 3 décimales.
+Test de Chi2
+Notre générateur :
+(0.001, False)(0.01, False)(0.025, False)(0.05, False)(0.1, False)
+random de python :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+test 54: avec 300000 nombres générés et 3 décimales.
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, False)(0.025, False)(0.05, False)(0.1, False)
+random de python :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+test 55: avec 300000 nombres générés et 3 décimales.
+Test de Chi2
+Notre générateur :
+(0.001, False)(0.01, False)(0.025, False)(0.05, False)(0.1, False)
+random de python :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+test 56: avec 300000 nombres générés et 3 décimales.
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, False)(0.025, False)(0.05, False)(0.1, False)
+random de python :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+test 57: avec 300000 nombres générés et 3 décimales.
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, False)(0.025, False)(0.05, False)(0.1, False)
+random de python :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+test 58: avec 300000 nombres générés et 3 décimales.
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, False)(0.025, False)(0.05, False)(0.1, False)
+random de python :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+test 59: avec 300000 nombres générés et 3 décimales.
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, False)(0.025, False)(0.05, False)(0.1, False)
+random de python :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+test 60: avec 300000 nombres générés et 3 décimales.
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, False)(0.05, False)(0.1, False)
+random de python :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+test 61: avec 300000 nombres générés et 3 décimales.
+Test de Chi2
+Notre générateur :
+(0.001, False)(0.01, False)(0.025, False)(0.05, False)(0.1, False)
+random de python :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+test 62: avec 300000 nombres générés et 3 décimales.
+Test de Chi2
+Notre générateur :
+(0.001, False)(0.01, False)(0.025, False)(0.05, False)(0.1, False)
+random de python :
+(0.001, True)(0.01, True)(0.025, True)(0.05, False)(0.1, False)
+test 63: avec 300000 nombres générés et 3 décimales.
+Test de Chi2
+Notre générateur :
+(0.001, False)(0.01, False)(0.025, False)(0.05, False)(0.1, False)
+random de python :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+test 64: avec 300000 nombres générés et 3 décimales.
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, False)(0.025, False)(0.05, False)(0.1, False)
+random de python :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+test 65: avec 300000 nombres générés et 3 décimales.
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, False)(0.1, False)
+random de python :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+test 66: avec 300000 nombres générés et 3 décimales.
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, False)(0.1, False)
+random de python :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+test 67: avec 300000 nombres générés et 3 décimales.
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, True)(0.05, False)(0.1, False)
+random de python :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+test 68: avec 300000 nombres générés et 3 décimales.
+Test de Chi2
+Notre générateur :
+(0.001, False)(0.01, False)(0.025, False)(0.05, False)(0.1, False)
+random de python :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+test 69: avec 300000 nombres générés et 3 décimales.
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, False)(0.025, False)(0.05, False)(0.1, False)
+random de python :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+test 70: avec 300000 nombres générés et 3 décimales.
+Test de Chi2
+Notre générateur :
+(0.001, False)(0.01, False)(0.025, False)(0.05, False)(0.1, False)
+random de python :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+test 71: avec 300000 nombres générés et 3 décimales.
+Test de Chi2
+Notre générateur :
+(0.001, False)(0.01, False)(0.025, False)(0.05, False)(0.1, False)
+random de python :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+test 72: avec 300000 nombres générés et 3 décimales.
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, False)(0.05, False)(0.1, False)
+random de python :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+test 73: avec 300000 nombres générés et 3 décimales.
+Test de Chi2
+Notre générateur :
+(0.001, False)(0.01, False)(0.025, False)(0.05, False)(0.1, False)
+random de python :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+test 74: avec 300000 nombres générés et 3 décimales.
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, False)(0.05, False)(0.1, False)
+random de python :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+test 75: avec 300000 nombres générés et 3 décimales.
+Test de Chi2
+Notre générateur :
+(0.001, False)(0.01, False)(0.025, False)(0.05, False)(0.1, False)
+random de python :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+test 76: avec 300000 nombres générés et 3 décimales.
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, False)(0.025, False)(0.05, False)(0.1, False)
+random de python :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+test 77: avec 300000 nombres générés et 3 décimales.
+Test de Chi2
+Notre générateur :
+(0.001, False)(0.01, False)(0.025, False)(0.05, False)(0.1, False)
+random de python :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+test 78: avec 300000 nombres générés et 3 décimales.
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, False)(0.05, False)(0.1, False)
+random de python :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+test 79: avec 300000 nombres générés et 3 décimales.
+Test de Chi2
+Notre générateur :
+(0.001, False)(0.01, False)(0.025, False)(0.05, False)(0.1, False)
+random de python :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+test 80: avec 300000 nombres générés et 3 décimales.
+Test de Chi2
+Notre générateur :
+(0.001, False)(0.01, False)(0.025, False)(0.05, False)(0.1, False)
+random de python :
+(0.001, True)(0.01, True)(0.025, True)(0.05, False)(0.1, False)
+test 81: avec 300000 nombres générés et 3 décimales.
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, False)(0.05, False)(0.1, False)
+random de python :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+test 82: avec 300000 nombres générés et 3 décimales.
+Test de Chi2
+Notre générateur :
+(0.001, False)(0.01, False)(0.025, False)(0.05, False)(0.1, False)
+random de python :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+test 83: avec 300000 nombres générés et 3 décimales.
+Test de Chi2
+Notre générateur :
+(0.001, False)(0.01, False)(0.025, False)(0.05, False)(0.1, False)
+random de python :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+test 84: avec 300000 nombres générés et 3 décimales.
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, False)(0.025, False)(0.05, False)(0.1, False)
+random de python :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+test 85: avec 300000 nombres générés et 3 décimales.
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, False)(0.025, False)(0.05, False)(0.1, False)
+random de python :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+test 86: avec 300000 nombres générés et 3 décimales.
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, False)(0.025, False)(0.05, False)(0.1, False)
+random de python :
+(0.001, True)(0.01, True)(0.025, True)(0.05, False)(0.1, False)
+test 87: avec 300000 nombres générés et 3 décimales.
+Test de Chi2
+Notre générateur :
+(0.001, False)(0.01, False)(0.025, False)(0.05, False)(0.1, False)
+random de python :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+test 88: avec 300000 nombres générés et 3 décimales.
+Test de Chi2
+Notre générateur :
+(0.001, False)(0.01, False)(0.025, False)(0.05, False)(0.1, False)
+random de python :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+test 89: avec 300000 nombres générés et 3 décimales.
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, False)(0.05, False)(0.1, False)
+random de python :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+test 90: avec 300000 nombres générés et 3 décimales.
+Test de Chi2
+Notre générateur :
+(0.001, False)(0.01, False)(0.025, False)(0.05, False)(0.1, False)
+random de python :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+test 91: avec 300000 nombres générés et 3 décimales.
+Test de Chi2
+Notre générateur :
+(0.001, False)(0.01, False)(0.025, False)(0.05, False)(0.1, False)
+random de python :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+test 92: avec 300000 nombres générés et 3 décimales.
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, False)(0.025, False)(0.05, False)(0.1, False)
+random de python :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+test 93: avec 300000 nombres générés et 3 décimales.
+Test de Chi2
+Notre générateur :
+(0.001, False)(0.01, False)(0.025, False)(0.05, False)(0.1, False)
+random de python :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+test 94: avec 300000 nombres générés et 3 décimales.
+Test de Chi2
+Notre générateur :
+(0.001, False)(0.01, False)(0.025, False)(0.05, False)(0.1, False)
+random de python :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+test 95: avec 300000 nombres générés et 3 décimales.
+Test de Chi2
+Notre générateur :
+(0.001, False)(0.01, False)(0.025, False)(0.05, False)(0.1, False)
+random de python :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+test 96: avec 300000 nombres générés et 3 décimales.
+Test de Chi2
+Notre générateur :
+(0.001, False)(0.01, False)(0.025, False)(0.05, False)(0.1, False)
+random de python :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+test 97: avec 300000 nombres générés et 3 décimales.
+Test de Chi2
+Notre générateur :
+(0.001, False)(0.01, False)(0.025, False)(0.05, False)(0.1, False)
+random de python :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+test 98: avec 300000 nombres générés et 3 décimales.
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, True)(0.025, False)(0.05, False)(0.1, False)
+random de python :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+test 99: avec 300000 nombres générés et 3 décimales.
+Test de Chi2
+Notre générateur :
+(0.001, False)(0.01, False)(0.025, False)(0.05, False)(0.1, False)
+random de python :
+(0.001, True)(0.01, True)(0.025, True)(0.05, True)(0.1, True)
+test 100: avec 300000 nombres générés et 3 décimales.
+Test de Chi2
+Notre générateur :
+(0.001, True)(0.01, False)(0.025, False)(0.05, False)(0.1, False)
+random de python :
+(0.001, True)(0.01, True)(0.025, True)(0.05, False)(0.1, False)
