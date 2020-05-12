@@ -75,11 +75,9 @@ def Kr(N, dict_value, dict_proba):
 def test_chi2(r, list_value, dict_value, dict_proba, deg):
     list_win = []
     kr = Kr(len(list_value), dict_value, dict_proba)
-    print(kr)
     list_alpha = [0.001, 0.01, 0.025, 0.05, 0.1]
     for alpha in list_alpha:
         crit_value = scp.chi2.ppf(1-alpha, deg)
-        print(crit_value)
         if kr < crit_value:
             list_win.append((alpha, True))
         else:
@@ -96,16 +94,12 @@ def test_gap(a, b, list_value):
     compt = 0
     for i in range(k+1, len(list_value)):
         if list_value[i] >= a and list_value[i] <= b:
-            if compt > 10:
-                list_gap.append(11)
-            else:
-                list_gap.append(compt)
+            list_gap.append(compt)
             compt = 0
         else :
             compt += 1
     dict_value = occ_number(list_gap)
     dict_proba = proba_dict_gap(a, b, dict_value)
-    print(dict_proba)
     deg = len(dict_value) - 1
     return test_chi2(len(dict_value), list_gap, dict_value, dict_proba, deg)
 
@@ -123,9 +117,7 @@ def test_poker(list_value, k=5, d=10):
     return test_chi2(d, list_poker, dict_value, dict_proba, d-1)
 
 if __name__ == "__main__":
-    """
-    TEST DE CHI2
-    """
+    """TEST DE CHI2"""
     """
     list_value = get_decimal_pi()
     dict_value = occ_number(list_value)
@@ -135,10 +127,8 @@ if __name__ == "__main__":
     list_final = test_chi2(r, list_value, dict_value, dict_proba, deg)
     print(list_final)
     """
-    """
-    TEST DU GAP
-    """
-    """
+    """TEST DU GAP"""
+
     list_value = get_decimal_pi()
     for i in range(len(list_value)):
         list_value[i] /= 10
@@ -146,10 +136,8 @@ if __name__ == "__main__":
     b = float(input("b dans ]0, 1] avec a < b : "))
     list_final = test_gap(a, b, list_value)
     print(list_final)
-    """
-    """
-    TEST DU POKER
-    """
+
+    """TEST DU POKER"""
     """
     list_value = get_decimal_pi()
     list_final = test_poker(list_value)
