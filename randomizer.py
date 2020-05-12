@@ -24,7 +24,7 @@ def generator_random(decimal_number):
 
 if __name__ == "__main__":
     with open ('test.txt', 'w') as f:
-        for ___ in range(1, 101):
+        for ___ in range(1, 2):
             k = 300000
             n = 3
 
@@ -100,19 +100,23 @@ if __name__ == "__main__":
 
             """Test de Chi2 avec degré = 9"""
             """Notre générateur :"""
+            """
             dict_proba_chi2_9_us = pi.proba_dict_chi2(len(dict_test_9_us), dict_test_9_us)
             list_final_chi2_9_us = pi.test_chi2(len(list_test_us), list_test_us, dict_test_9_us, dict_proba_chi2_9_us, len(dict_test_9_us)-1)
             f.write("Test de Chi2 avec degré = 9" + '\n')
             f.write("Notre générateur :" + '\n')
             string = "".join(str(elem) for elem in list_final_chi2_9_us)
             f.write(string + '\n')
+            """
             """-----------------------------------------------------"""
             """Random :"""
+            """
             dict_proba_chi2_9_random = pi.proba_dict_chi2(len(dict_test_9_random), dict_test_9_random)
             list_final_chi2_9_random = pi.test_chi2(len(list_test_random), list_test_random, dict_test_9_random, dict_proba_chi2_9_random, len(dict_test_9_random)-1)
             f.write("random de python :" + '\n')
             string = "".join(str(elem) for elem in list_final_chi2_9_random)
             f.write(string + '\n')
+            """
             """-----------------------------------------------------"""
             """-----------------------------------------------------"""
             """Test de Chi2 avec degré = len(dict_test_us) - 1"""
@@ -138,22 +142,22 @@ if __name__ == "__main__":
             """-----------------------------------------------------"""
             """ Test du Gap """
             """ Notre générateur :"""
-            """
-            a = float(input("a dans [0, 1[ : "))
-            b = float(input("b dans ]0, 1] avec a < b : "))
+
+            a = 0   #float(input("a dans [0, 1[ : "))
+            b = 0.5   #float(input("b dans ]0, 1] avec a < b : "))
             list_final_gap_us = pi.test_gap(a, b, list_test_us)
             string = "".join(str(elem) for elem in list_final_gap_us)
             f.write("Test du gap" + '\n')
             f.write("Notre générateur :" + '\n')
             f.write(string + '\n')
-            """
+
             """ Random :"""
-            """
+
             list_final_gap_random = pi.test_gap(a, b, list_test_random)
             string = "".join(str(elem) for elem in list_final_gap_random)
             f.write("random de python :" + '\n')
             f.write(string + '\n')
-            """
+
             """-----------------------------------------------------"""
             """-----------------------------------------------------"""
             """ Test du Poker """

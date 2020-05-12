@@ -1,1 +1,6 @@
 test 1: avec 300000 nombres générés et 3 décimales.
+Test du gap
+Notre générateur :
+(0.001, False)(0.01, False)(0.025, False)(0.05, False)(0.1, False)
+random de python :
+(0.001, False)(0.01, False)(0.025, False)(0.05, False)(0.1, False)
