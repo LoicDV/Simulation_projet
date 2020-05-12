@@ -75,7 +75,6 @@ def Kr(N, dict_value, dict_proba):
 def test_chi2(r, list_value, dict_value, dict_proba, deg):
     list_win = []
     kr = Kr(len(list_value), dict_value, dict_proba)
-    print(kr)
     list_alpha = [0.001, 0.01, 0.025, 0.05, 0.1]
     for alpha in list_alpha:
         crit_value = scp.chi2.ppf(1-alpha, deg)
