@@ -44,7 +44,7 @@ def proba_dict_gap(p, dict_value):
 def proba_dict_poker(k, d):
     dict_proba = {}
     dict_stir = {}
-    for i in range(1, d):
+    for i in range(1, k+1):
         tmp = d
         stirling = stirling_number(dict_stir, k, i)
         while tmp >= d-i+1:
@@ -116,7 +116,10 @@ def test_gap(a, b, list_value, pi):
     deg = len(dict_value) - 1
     return test_chi2(len(dict_value), list_gap, dict_value, dict_proba, deg)
 
-def test_poker(list_value, k=5, d=10):
+def test_poker(list_value, poker, k=5,d=10):
+    if poker:
+        for i in range(len(list_value)):
+            list_value[i] = math.floor(list_value[i]*10)/10
     dict_proba = proba_dict_poker(k, d)
     list_poker = []
     list_test_poker = []
@@ -127,7 +130,7 @@ def test_poker(list_value, k=5, d=10):
             list_poker.append(number)
             list_test_poker = []
     dict_value = occ_number(list_poker)
-    return test_chi2(d, list_poker, dict_value, dict_proba, d-1)
+    return test_chi2(k, list_poker, dict_value, dict_proba, k-1)
 
 if __name__ == "__main__":
     """TEST DE CHI2"""
@@ -141,6 +144,7 @@ if __name__ == "__main__":
     print(list_final)
     """
     """TEST DU GAP"""
+    """
     list_value = get_decimal_pi()
     for i in range(len(list_value)):
         list_value[i] /= 10
@@ -148,9 +152,8 @@ if __name__ == "__main__":
     b = float(input("b dans ]0, 1] avec a < b : "))
     list_final = test_gap(a, b, list_value, True)
     print(list_final)
+    """
     """TEST DU POKER"""
-    """
     list_value = get_decimal_pi()
-    list_final = test_poker(list_value)
+    list_final = test_poker(list_value, False)
     print(list_final)
-    """

@@ -25,7 +25,7 @@ def generator_random(decimal_number):
 if __name__ == "__main__":
     with open ('test.txt', 'w') as f:
         for ___ in range(1, 101):
-            k = 300000
+            k = 100000
             n = 3
 
             title = "test " + str(___) + ":"
@@ -142,37 +142,36 @@ if __name__ == "__main__":
             """-----------------------------------------------------"""
             """ Test du Gap """
             """ Notre générateur :"""
-
-            a = 0.2   #float(input("a dans [0, 1[ : "))
+            """
+            a = 0   #float(input("a dans [0, 1[ : "))
             b = 0.5   #float(input("b dans ]0, 1] avec a < b : "))
             list_final_gap_us = pi.test_gap(a, b, list_test_us, False)
             string = "".join(str(elem) for elem in list_final_gap_us)
             f.write("Test du gap" + '\n')
             f.write("Notre générateur :" + '\n')
             f.write(string + '\n')
-
+            """
             """ Random :"""
-
+            """
             list_final_gap_random = pi.test_gap(a, b, list_test_random, False)
             string = "".join(str(elem) for elem in list_final_gap_random)
             f.write("random de python :" + '\n')
             f.write(string + '\n')
-
+            """
             """-----------------------------------------------------"""
             """-----------------------------------------------------"""
             """ Test du Poker """
             """ Notre générateur :"""
-            """
-            list_final_poker_us = pi.test_poker(list_test_util_us)
+
+            list_final_poker_us = pi.test_poker(list_test_us, True)
             string = "".join(str(elem) for elem in list_final_poker_us)
             f.write("Test du poker" + '\n')
             f.write("Notre générateur :" + '\n')
             f.write(string + '\n')
-            """
+
             """ Random :"""
-            """
-            list_final_poker_random = pi.test_poker(list_test_util_random)
+
+            list_final_poker_random = pi.test_poker(list_test_random, True)
             string = "".join(str(elem) for elem in list_final_poker_random)
             f.write("random de python :" + '\n')
             f.write(string + '\n')
-            """
