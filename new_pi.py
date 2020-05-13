@@ -28,12 +28,17 @@ def proba_dict_chi2(r, dict_value):
         dict_proba[i] = proba
     return dict_proba
 
-def proba_dict_gap(a, b, dict_value):
+def proba_dict_gap(p, dict_value):
     dict_proba = {}
-    p = math.floor(10*b)/10 - math.ceil(10*a)/10 + 0.1
     for i in dict_value:
-        proba = math.pow(1 - p, i) * p
+        if i == 10:
+            continue
+        proba = math.pow(1-p, i) * p
         dict_proba[i] = proba
+    somme = 0
+    for j in dict_proba:
+        somme += dict_proba[j]
+    dict_proba[10] = 1 - somme
     return dict_proba
 
 def proba_dict_poker(k, d):
@@ -84,9 +89,11 @@ def test_chi2(r, list_value, dict_value, dict_proba, deg):
             list_win.append((alpha, False))
     return list_win
 
-def test_gap(a, b, list_value):
-    if (a >= b) or (a < 0) or (b > 0.9):
-        raise Exception("a, b have to be in [0, 0.9].")
+def test_gap(a, b, list_value, pi):
+    if (a >= b) or (a < 0) or (b > 1):
+        raise Exception("a, b have to be in [0, 1].")
+    if pi and b > 0.9:
+        b = 0.9
     k = 0
     while list_value[k] < a or list_value[k] > b:
         k += 1
@@ -94,12 +101,18 @@ def test_gap(a, b, list_value):
     compt = 0
     for i in range(k+1, len(list_value)):
         if list_value[i] >= a and list_value[i] <= b:
+            if compt > 10:
+                compt = 10
             list_gap.append(compt)
             compt = 0
         else :
             compt += 1
     dict_value = occ_number(list_gap)
-    dict_proba = proba_dict_gap(a, b, dict_value)
+    if pi:
+        proba = math.floor(10*b)/10 - math.ceil(10*a)/10 + 0.1
+    else:
+        proba = b - a
+    dict_proba = proba_dict_gap(proba, dict_value)
     deg = len(dict_value) - 1
     return test_chi2(len(dict_value), list_gap, dict_value, dict_proba, deg)
 
@@ -128,15 +141,13 @@ if __name__ == "__main__":
     print(list_final)
     """
     """TEST DU GAP"""
-
     list_value = get_decimal_pi()
     for i in range(len(list_value)):
         list_value[i] /= 10
     a = float(input("a dans [0, 1[ : "))
     b = float(input("b dans ]0, 1] avec a < b : "))
-    list_final = test_gap(a, b, list_value)
+    list_final = test_gap(a, b, list_value, True)
     print(list_final)
-
     """TEST DU POKER"""
     """
     list_value = get_decimal_pi()
