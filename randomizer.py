@@ -24,8 +24,8 @@ def generator_random(decimal_number):
 
 if __name__ == "__main__":
     with open ('test.txt', 'w') as f:
-        for ___ in range(1, 101):
-            k = 100000
+        for ___ in range(1, 1001):
+            k = 300000
             n = 3
 
             title = "test " + str(___) + ":"
@@ -143,8 +143,8 @@ if __name__ == "__main__":
             """ Test du Gap """
             """ Notre générateur :"""
             """
-            a = 0   #float(input("a dans [0, 1[ : "))
-            b = 0.5   #float(input("b dans ]0, 1] avec a < b : "))
+            a = 0.5   #float(input("a dans [0, 1[ : "))
+            b = 1   #float(input("b dans ]0, 1] avec a < b : "))
             list_final_gap_us = pi.test_gap(a, b, list_test_us, False)
             string = "".join(str(elem) for elem in list_final_gap_us)
             f.write("Test du gap" + '\n')
