@@ -23,8 +23,16 @@ def generator_random(decimal_number):
     return number
 
 if __name__ == "__main__":
+    print("(1) Test de Chi2 avec deg 9 :")
+    print("(2) Test de Chi2 avec deg len(dict_value)-1 :")
+    print("(3) Test du Gap :")
+    print("(4) Test du Poker :")
+    print("(5) Exit")
+    number_test = input("Quel test voulez-vous ?" + '\n')
+    if int(number_test) != 1 and int(number_test) != 2 and int(number_test) != 3 and int(number_test) != 4 and int(number_test) != 5:
+        raise Exception("Vous n'entrez pas un bon numéro.")
     with open ('test.txt', 'w') as f:
-        for ___ in range(1, 1001):
+        for ___ in range(1, 11):
             k = 300000
             n = 3
 
@@ -98,80 +106,63 @@ if __name__ == "__main__":
                 elif 9 <= tmp and tmp < 10:
                     dict_test_9_random[9] += 1
 
-            """Test de Chi2 avec degré = 9"""
-            """Notre générateur :"""
-            """
-            dict_proba_chi2_9_us = pi.proba_dict_chi2(len(dict_test_9_us), dict_test_9_us)
-            list_final_chi2_9_us = pi.test_chi2(len(list_test_us), list_test_us, dict_test_9_us, dict_proba_chi2_9_us, len(dict_test_9_us)-1)
-            f.write("Test de Chi2 avec degré = 9" + '\n')
-            f.write("Notre générateur :" + '\n')
-            string = "".join(str(elem) for elem in list_final_chi2_9_us)
-            f.write(string + '\n')
-            """
-            """-----------------------------------------------------"""
-            """Random :"""
-            """
-            dict_proba_chi2_9_random = pi.proba_dict_chi2(len(dict_test_9_random), dict_test_9_random)
-            list_final_chi2_9_random = pi.test_chi2(len(list_test_random), list_test_random, dict_test_9_random, dict_proba_chi2_9_random, len(dict_test_9_random)-1)
-            f.write("random de python :" + '\n')
-            string = "".join(str(elem) for elem in list_final_chi2_9_random)
-            f.write(string + '\n')
-            """
-            """-----------------------------------------------------"""
-            """-----------------------------------------------------"""
-            """Test de Chi2 avec degré = len(dict_test_us) - 1"""
-            """Notre générateur :"""
-            """
-            dict_proba_chi2_us = pi.proba_dict_chi2(len(dict_test_us), dict_test_us)
-            list_final_chi2_us = pi.test_chi2(len(list_test_us), list_test_us, dict_test_us, dict_proba_chi2_us, len(dict_test_us)-1)
-            f.write("Test de Chi2" + '\n')
-            f.write("Notre générateur :" + '\n')
-            string = "".join(str(elem) for elem in list_final_chi2_us)
-            f.write(string + '\n')
-            """
-            """-----------------------------------------------------"""
-            """Random :"""
-            """
-            dict_proba_chi2_random = pi.proba_dict_chi2(len(dict_test_random), dict_test_random)
-            list_final_chi2_random = pi.test_chi2(len(list_test_random), list_test_random, dict_test_random, dict_proba_chi2_random, len(dict_test_random)-1)
-            f.write("random de python :" + '\n')
-            string = "".join(str(elem) for elem in list_final_chi2_random)
-            f.write(string + '\n')
-            """
-            """-----------------------------------------------------"""
-            """-----------------------------------------------------"""
-            """ Test du Gap """
-            """ Notre générateur :"""
-            """
-            a = 0.5   #float(input("a dans [0, 1[ : "))
-            b = 1   #float(input("b dans ]0, 1] avec a < b : "))
-            list_final_gap_us = pi.test_gap(a, b, list_test_us, False)
-            string = "".join(str(elem) for elem in list_final_gap_us)
-            f.write("Test du gap" + '\n')
-            f.write("Notre générateur :" + '\n')
-            f.write(string + '\n')
-            """
-            """ Random :"""
-            """
-            list_final_gap_random = pi.test_gap(a, b, list_test_random, False)
-            string = "".join(str(elem) for elem in list_final_gap_random)
-            f.write("random de python :" + '\n')
-            f.write(string + '\n')
-            """
-            """-----------------------------------------------------"""
-            """-----------------------------------------------------"""
-            """ Test du Poker """
-            """ Notre générateur :"""
-
-            list_final_poker_us = pi.test_poker(list_test_us, True)
-            string = "".join(str(elem) for elem in list_final_poker_us)
-            f.write("Test du poker" + '\n')
-            f.write("Notre générateur :" + '\n')
-            f.write(string + '\n')
-
-            """ Random :"""
-
-            list_final_poker_random = pi.test_poker(list_test_random, True)
-            string = "".join(str(elem) for elem in list_final_poker_random)
-            f.write("random de python :" + '\n')
-            f.write(string + '\n')
+            if number_test == 1 :
+                """Test de Chi2 avec degré = 9"""
+                """Notre générateur :"""
+                dict_proba_chi2_9_us = pi.proba_dict_chi2(len(dict_test_9_us), dict_test_9_us)
+                list_final_chi2_9_us = pi.test_chi2(len(list_test_us), list_test_us, dict_test_9_us, dict_proba_chi2_9_us, len(dict_test_9_us)-1)
+                f.write("Test de Chi2 avec degré = 9" + '\n')
+                f.write("Notre générateur :" + '\n')
+                string = "".join(str(elem) for elem in list_final_chi2_9_us)
+                f.write(string + '\n')
+                """Random :"""
+                dict_proba_chi2_9_random = pi.proba_dict_chi2(len(dict_test_9_random), dict_test_9_random)
+                list_final_chi2_9_random = pi.test_chi2(len(list_test_random), list_test_random, dict_test_9_random, dict_proba_chi2_9_random, len(dict_test_9_random)-1)
+                f.write("random de python :" + '\n')
+                string = "".join(str(elem) for elem in list_final_chi2_9_random)
+                f.write(string + '\n')
+            elif number_test == 2:
+                """Test de Chi2 avec degré = len(dict_test_us) - 1"""
+                """Notre générateur :"""
+                dict_proba_chi2_us = pi.proba_dict_chi2(len(dict_test_us), dict_test_us)
+                list_final_chi2_us = pi.test_chi2(len(list_test_us), list_test_us, dict_test_us, dict_proba_chi2_us, len(dict_test_us)-1)
+                f.write("Test de Chi2" + '\n')
+                f.write("Notre générateur :" + '\n')
+                string = "".join(str(elem) for elem in list_final_chi2_us)
+                f.write(string + '\n')
+                """Random :"""
+                dict_proba_chi2_random = pi.proba_dict_chi2(len(dict_test_random), dict_test_random)
+                list_final_chi2_random = pi.test_chi2(len(list_test_random), list_test_random, dict_test_random, dict_proba_chi2_random, len(dict_test_random)-1)
+                f.write("random de python :" + '\n')
+                string = "".join(str(elem) for elem in list_final_chi2_random)
+                f.write(string + '\n')
+            elif number_test == 3:
+                """ Test du Gap """
+                """ Notre générateur :"""
+                a = 0.5   #float(input("a dans [0, 1[ : "))
+                b = 1   #float(input("b dans ]0, 1] avec a < b : "))
+                list_final_gap_us = pi.test_gap(a, b, list_test_us, False)
+                string = "".join(str(elem) for elem in list_final_gap_us)
+                f.write("Test du gap" + '\n')
+                f.write("Notre générateur :" + '\n')
+                f.write(string + '\n')
+                """ Random :"""
+                list_final_gap_random = pi.test_gap(a, b, list_test_random, False)
+                string = "".join(str(elem) for elem in list_final_gap_random)
+                f.write("random de python :" + '\n')
+                f.write(string + '\n')
+            elif number_test == 4:
+                """ Test du Poker """
+                """ Notre générateur :"""
+                list_final_poker_us = pi.test_poker(list_test_us, True)
+                string = "".join(str(elem) for elem in list_final_poker_us)
+                f.write("Test du poker" + '\n')
+                f.write("Notre générateur :" + '\n')
+                f.write(string + '\n')
+                """ Random :"""
+                list_final_poker_random = pi.test_poker(list_test_random, True)
+                string = "".join(str(elem) for elem in list_final_poker_random)
+                f.write("random de python :" + '\n')
+                f.write(string + '\n')
+            else:
+                exit()

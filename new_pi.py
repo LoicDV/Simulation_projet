@@ -44,7 +44,7 @@ def proba_dict_gap(p, dict_value):
 def proba_dict_poker(k, d):
     dict_proba = {}
     dict_stir = {}
-    for i in range(1, k+1):
+    for i in range(1, d):
         tmp = d
         stirling = stirling_number(dict_stir, k, i)
         while tmp >= d-i+1:
@@ -133,27 +133,36 @@ def test_poker(list_value, poker, k=5,d=10):
     return test_chi2(k, list_poker, dict_value, dict_proba, k-1)
 
 if __name__ == "__main__":
-    """TEST DE CHI2"""
-    """
-    list_value = get_decimal_pi()
-    dict_value = occ_number(list_value)
-    dict_proba = proba_dict_chi2(len(dict_value), dict_value)
-    r = len(dict_value)
-    deg = r - 1
-    list_final = test_chi2(r, list_value, dict_value, dict_proba, deg)
-    print(list_final)
-    """
-    """TEST DU GAP"""
-    """
-    list_value = get_decimal_pi()
-    for i in range(len(list_value)):
-        list_value[i] /= 10
-    a = float(input("a dans [0, 1[ : "))
-    b = float(input("b dans ]0, 1] avec a < b : "))
-    list_final = test_gap(a, b, list_value, True)
-    print(list_final)
-    """
-    """TEST DU POKER"""
-    list_value = get_decimal_pi()
-    list_final = test_poker(list_value, False)
-    print(list_final)
+    print("(1) Test de Chi2 :")
+    print("(2) Test du Gap :")
+    print("(3) Test du Poker :")
+    print("(4) Exit")
+    number_test = input("Quel test voulez-vous ?" + '\n')
+    if int(number_test) != 1 and int(number_test) != 2 and int(number_test) != 3 and int(number_test) != 4:
+        raise Exception("Vous n'entrez pas un bon numéro.")
+    elif number_test == 1:
+        """TEST DE CHI2"""
+        list_value = get_decimal_pi()
+        dict_value = occ_number(list_value)
+        dict_proba = proba_dict_chi2(len(dict_value), dict_value)
+        r = len(dict_value)
+        deg = r - 1
+        list_final = test_chi2(r, list_value, dict_value, dict_proba, deg)
+        print(list_final)
+
+    elif number_test == 2:
+        """TEST DU GAP"""
+        list_value = get_decimal_pi()
+        for i in range(len(list_value)):
+            list_value[i] /= 10
+        a = float(input("a dans [0, 1[ : "))
+        b = float(input("b dans ]0, 1] avec a < b : "))
+        list_final = test_gap(a, b, list_value, True)
+        print(list_final)
+    elif number_test == 3:
+        """TEST DU POKER"""
+        list_value = get_decimal_pi()
+        list_final = test_poker(list_value, False)
+        print(list_final)
+    else:
+        exit()

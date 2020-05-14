@@ -1,0 +1,23 @@
+Pour les problèmes que nous avons rencontrés, nous avons eu pas mal de soucis, pour tous
+les tests, lors du calcul du Kr. En effet, notre premier gros problème venaient surtout de notre
+dictionnaire concernant les probas. En réalité, lorsque nous avons commencé à réfléchir et à coder
+notre projet, nous n'avions pas réfléchi aux nombres de paquets créés. Par exemple, lors du test de
+chi2, nous obtenions une longueur de 1000 pour notre dictionnaire, ce qui donne une plus grande
+sensibilité à une quelconque variation dans les nombres. Ceci explique donc pourquoi dans le test_chi2.txt,
+il y a autant de tests échoués.
+
+Le deuxième gros problème qu'on avait, qui est lui aussi lié au Kr, concerne le dictionnaire d'occurence
+pour chacun des tests. Nous avons eu quelques difficultés pour cerner le problème mais au bout d'un certain
+temps, nous avons compris que nous prenions également trop large. C'est-à-dire qu'encore une fois, au vu du
+nombre de paquets, la moindre variation fait que notre Kr peut exploser. Ceci ne se voyait pas avec les
+décimales de pi car on sait que les valeurs qui se trouveront dans le dictionnaire sont 0, 1, ..., 9.
+Mais avec nos propres nombres, on aura une plus grande longueur ce qui explique le problème. Pour régler
+ce fameux problème, nous avons regrouper des cas en interval. Par exemple, les x \in [0, 0.1] sont considérés
+dans un interval et ainsi de suite pour tous nos nombres.
+
+
+
+Pour lancer les tests, il vous suffit juste de lancer new_pi.py, ce qui lancera les tests pour les décimales
+de pi ou lancer randomiser ce qui lancera les tests mais pour notre générateur et celui du random de python.
+Pour le randomiser.py, si vous souhaitez changer la quantité de nombres générés, il suffit de changer le k et
+pour changer le nombre de décimales, il suffit de changer le n.
