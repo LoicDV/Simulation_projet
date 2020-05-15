@@ -28,15 +28,16 @@ if __name__ == "__main__":
     print("(3) Test du Gap :")
     print("(4) Test du Poker :")
     print("(5) Exit")
-    number_test = input("Quel test voulez-vous ?" + '\n')
-    if int(number_test) != 1 and int(number_test) != 2 and int(number_test) != 3 and int(number_test) != 4 and int(number_test) != 5:
+    number_test = int(input("Quel test voulez-vous ?" + '\n'))
+    if number_test != 1 and number_test != 2 and number_test != 3 and number_test != 4 and number_test != 5:
         raise Exception("Vous n'entrez pas un bon numéro.")
     with open ('test.txt', 'w') as f:
-        for ___ in range(1, 11):
-            k = 300000
-            n = 3
+        k = 300000
+        n = 3
+        l = 100
+        for i in range(l):
 
-            title = "test " + str(___) + ":"
+            title = "test " + str(+1) + ":"
             print(title)
             f.write(title + " avec " + str(k) + " nombres générés et " + str(n) + " décimales." + '\n')
 
@@ -50,7 +51,7 @@ if __name__ == "__main__":
                 list_test_util_us.append(int(number))
             dict_test_us = pi.occ_number(list_test_util_us)
             dict_test_9_us = {0 : 0, 1 : 0, 2 : 0, 3 : 0, 4 : 0, 5 : 0, 6 : 0, 7 : 0, 8 : 0, 9 : 0}
-            for i in range(len(list_test_us)):
+            for j in range(len(list_test_us)):
                 tmp = list_test_us[i] * 10
                 if 0 <= tmp and tmp < 1:
                     dict_test_9_us[0] += 1
@@ -83,7 +84,7 @@ if __name__ == "__main__":
                 list_test_util_random.append(int(number))
             dict_test_random = pi.occ_number(list_test_util_random)
             dict_test_9_random = {0 : 0, 1 : 0, 2 : 0, 3 : 0, 4 : 0, 5 : 0, 6 : 0, 7 : 0, 8 : 0, 9 : 0}
-            for i in range(len(list_test_us)):
+            for j in range(len(list_test_us)):
                 tmp = list_test_us[i] * 10
                 if 0 <= tmp and tmp < 1:
                     dict_test_9_random[0] += 1

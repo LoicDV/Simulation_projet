@@ -137,8 +137,8 @@ if __name__ == "__main__":
     print("(2) Test du Gap :")
     print("(3) Test du Poker :")
     print("(4) Exit")
-    number_test = input("Quel test voulez-vous ?" + '\n')
-    if int(number_test) != 1 and int(number_test) != 2 and int(number_test) != 3 and int(number_test) != 4:
+    number_test = int(input("Quel test voulez-vous ?" + '\n'))
+    if number_test != 1 and number_test != 2 and number_test != 3 and number_test != 4:
         raise Exception("Vous n'entrez pas un bon numéro.")
     elif number_test == 1:
         """TEST DE CHI2"""
