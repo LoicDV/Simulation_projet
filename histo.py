@@ -3,6 +3,16 @@ import new_pi as pi
 import randomizer
 
 def dict_gap(a, b, list_value, pi2):
+    """
+    Entrées: (float) a: nombre représentant le début de l'intervalle.
+             (float) b: nombre représentant la fin de l'intervalle.
+             (list) list_value: liste de nombres
+             (bool) pi2: True si c'est les décimales de pi, False sinon.
+    Sortie: (dict) un dictionnaire reprenant le nombre d'occurence des longueurs.
+    Effet: /
+
+    Crée un dictionnaire d'occurence comme pour le test du gap.
+    """
     if (a >= b) or (a < 0) or (b > 1):
         raise Exception("a, b have to be in [0, 1].")
     if pi2 and b > 0.9:
@@ -24,6 +34,16 @@ def dict_gap(a, b, list_value, pi2):
     return dict_value
 
 def dict_poker(list_value, poker, k=5, d=10):
+    """
+    Entrées: (list) list_value: liste de nombres.
+             (bool) poker: False si c'est les décimales de pi, True sinon.
+             (int) k: longueur de la main.
+             (int) d: #TODO
+    Sortie: (dict) un dictionnaire d'occurence de nombres.
+    Effet: /
+
+    Crée le dictionnaire d'occurence comme pour le test du poker.
+    """
     list_poker = []
     list_test_poker = []
     for elem in list_value:
@@ -36,6 +56,13 @@ def dict_poker(list_value, poker, k=5, d=10):
     return dict_value
 
 def histo_chi2(liste):
+    """
+    Entrée: (list) une liste totale de nombres.
+    Sortie: /
+    Effet: Un histogramme se crée.
+
+    Affiche un histogramme lié à la répartition des nombres dans le test de chi2.
+    """
     titre ="Histogramme sur les décimales de pi en fonction de leur occurence."
     plt.figure()
     plt.hist(liste, bins=10)
@@ -45,7 +72,17 @@ def histo_chi2(liste):
     plt.show()
 
 def histo_gap(dict_histo):
-    titre ="Histogramme sur les décimales de pi en fonction de leur occurence dans l'intervalle [0, 0.5]"
+    """
+    Entrée: (dict) un dictionnaire d'occurence.
+    Sortie: /
+    Effet: Un histogramme se crée.
+
+    Affiche un histogramme lié à la répartition des nombres dans le test du gap.
+    """
+    if a == 0 and b == 0.5:
+        titre ="Histogramme sur les décimales de pi en fonction de leur occurence dans l'intervalle [0, 0.5]"
+    else:
+        titre ="Histogramme sur les décimales de pi en fonction de leur occurence dans l'intervalle [0.5, 1]"
     plt.figure()
     plt.bar(dict_histo.keys(), dict_histo.values())
     plt.xlabel("Valeur des longueurs")
@@ -54,6 +91,13 @@ def histo_gap(dict_histo):
     plt.show()
 
 def histo_poker(dict_histo):
+    """
+    Entrée: (dict) un dictionnaire d'occurence.
+    Sortie: /
+    Effet: Un histogramme se crée.
+
+    Affiche un histogramme lié à la répartition des nombres dans le test du poker.
+    """
     titre ="Histogramme sur les décimales de pi en fonction de leur occurence dans l'intervalle [0, 0.5]"
     plt.figure()
     plt.bar(dict_histo.keys(), dict_histo.values())

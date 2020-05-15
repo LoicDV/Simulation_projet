@@ -2,6 +2,13 @@ import math
 import scipy.stats as scp
 
 def get_decimal_pi():
+    """
+    Entrée: /
+    Sortie: (list) une liste contenant les décimales de pi.
+    Effet: /
+
+    Crée une liste contenant 1 000 000 d'entiers représentant les décimales de pi.
+    """
     liste_totale = []
     with open("pi_decimal.txt") as file:
         for lines in file:
@@ -13,6 +20,13 @@ def get_decimal_pi():
     return liste_totale
 
 def occ_number(list_value):
+    """
+    Entrée: (list) une liste de nombre.
+    Sortie: (dict) un dictionnaire de nombre.
+    Effet: /
+
+    Crée un dictionnaire calculant l'occurence de chaque nombre.
+    """
     dict_occ = {}
     for element in list_value:
         if element not in dict_occ:
@@ -22,6 +36,14 @@ def occ_number(list_value):
     return dict_occ
 
 def proba_dict_chi2(r, dict_value):
+    """
+    Entrées: (int) r: entier pour la loi uniforme.
+             (dict) dict_value: dictionnaire d'occurence de nombres.
+    Sortie: (dict) un dictionnaire de probabilités.
+    Effet: /
+
+    Crée un dictionnaire de probabilités avec l'entier r et si le nombre se trouve dans le dictionnaire.
+    """
     dict_proba = {}
     proba = 1/r
     for i in dict_value:
@@ -29,6 +51,14 @@ def proba_dict_chi2(r, dict_value):
     return dict_proba
 
 def proba_dict_gap(p, dict_value):
+    """
+    Entrées: (float) p: une probabilité.
+             (dict) dict_value: un dictionnaire d'occurence de nombres.
+    Sortie: (dict) un dictionnaire de probabilités.
+    Effet: /
+
+    Crée un dictionnaire de probabilité avec les nombres se trouvant dans le dictionnaire d'occurence.
+    """
     dict_proba = {}
     for i in dict_value:
         if i == 10:
@@ -42,6 +72,14 @@ def proba_dict_gap(p, dict_value):
     return dict_proba
 
 def proba_dict_poker(k, d):
+    """
+    Entrées: (int) k: entier pour la longueur de la main.
+             (int) d: entier pour #TODO
+    Sortie: (dict) un dictionnaire de probabilités.
+    Effet: /
+
+    Crée un dictionnaire de proba par rapport #TODO
+    """
     dict_proba = {}
     dict_stir = {}
     for i in range(1, d):
@@ -55,6 +93,16 @@ def proba_dict_poker(k, d):
     return dict_proba
 
 def stirling_number(dict_stir, k, r):
+    """
+    Entrées: (dict) dict_stir: dictionnaire avec certain nombre de striling.
+             (int) k: entier pour la longueur de la main.
+             (int) r: entier #TODO
+    Sortie: (int) le nombre de Stirling.
+    Effet: Rajoute des valeurs dans dict_stir (méthode de mémoïsation).
+
+    Retourne le nombre de Striling correspondant au k et r
+    et modifie dict_stir pour rendre la fonction plus performante.
+    """
     if k < r:
         dict_stir[(k, r)] = 0
     if (k, r) in dict_stir:
@@ -70,6 +118,15 @@ def stirling_number(dict_stir, k, r):
     return stirling
 
 def Kr(N, dict_value, dict_proba):
+    """
+    Entrées: (int) N: nombre total d'élements.
+             (dict) dict_value: dictionnaire d'occurence de nombres.
+             (dict) dict_proba: dictionnaire de probabilités.
+    Sortie: (int) le nombre Kr.
+    Effet: /
+
+    Retourne le Kr correspondant qui nous sera utile pour savoir si on rejete ou non.
+    """
     kr = 0
     for i in dict_value:
         ni = dict_value[i]
@@ -78,6 +135,17 @@ def Kr(N, dict_value, dict_proba):
     return kr
 
 def test_chi2(r, list_value, dict_value, dict_proba, deg):
+    """
+    Entrées: (int) r: #TODO
+             (list) list_value: #TODO
+             (dict) dict_value: #TODO
+             (dict) dict_proba: #TODO
+             (int) deg: #TODO
+    Sortie: (list) une liste de tuples avec une valeur de alpha et un booléen.
+    Effet: /
+
+    Retourne le test de Chi2 avec le résultat du rejet ou non.
+    """
     list_win = []
     kr = Kr(len(list_value), dict_value, dict_proba)
     list_alpha = [0.001, 0.01, 0.025, 0.05, 0.1]
@@ -90,6 +158,16 @@ def test_chi2(r, list_value, dict_value, dict_proba, deg):
     return list_win
 
 def test_gap(a, b, list_value, pi):
+    """
+    Entrées: (float) a: nombre représentant le début de l'intervalle.
+             (float) b: nombre représentant la fin de l'intervalle.
+             (list) list_value: liste de nombres
+             (bool) pi: True si c'est les décimales de pi, False sinon.
+    Sortie: un appel vers le test de chi2 --> (list)
+    Effet: /
+
+    Exécute le test du gap avec un certain intervalle puis se termine sur le test de chi2.
+    """
     if (a >= b) or (a < 0) or (b > 1):
         raise Exception("a, b have to be in [0, 1].")
     if pi and b > 0.9:
@@ -117,6 +195,16 @@ def test_gap(a, b, list_value, pi):
     return test_chi2(len(dict_value), list_gap, dict_value, dict_proba, deg)
 
 def test_poker(list_value, poker, k=5,d=10):
+    """
+    Entrées: (list) list_value: liste de nombres.
+             (bool) poker: False si c'est les décimales de pi, True sinon.
+             (int) k: longueur de la main.
+             (int) d: #TODO
+    Sortie: un appel vers le test de chi2 --> (list)
+    Effet: /
+
+    Exécute le test du poker pour finir sur le test de chi2.
+    """
     if poker:
         for i in range(len(list_value)):
             list_value[i] = math.floor(list_value[i]*10)/10

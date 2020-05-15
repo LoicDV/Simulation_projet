@@ -6,6 +6,13 @@ import math
 list_value = pi.get_decimal_pi()
 
 def randFloat(decimal_number):
+    """
+    Entrée: (int) nombre de décimales que devra avoir le nombre.
+    Sortie: (float) un nombre avec le bon nombre de décimales.
+    Effet: /
+
+    Crée un nombre avec un certain nombre de décimale.
+    """
     floating = ""
     for __ in range(decimal_number):
         time = datetime.datetime.now().microsecond
@@ -18,6 +25,13 @@ def randFloat(decimal_number):
     return our_float
 
 def generator_random(decimal_number):
+    """
+    Entrée: (int) nombre de décimales que devra avoir le nombre.
+    Sortie: (float) un nombre avec le bon nombre de décimales.
+    Effet: /
+
+    Crée, avec le module random de python, un nombre avec un certain nombre de décimale.
+    """
     number = random.random()
     number = math.floor(number*(10**decimal_number))/(10**decimal_number)
     return number
