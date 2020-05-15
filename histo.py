@@ -38,7 +38,7 @@ def dict_poker(list_value, poker, k=5, d=10):
     Entrées: (list) list_value: liste de nombres.
              (bool) poker: False si c'est les décimales de pi, True sinon.
              (int) k: longueur de la main.
-             (int) d: #TODO
+             (int) d: le nombre d'intervalle.
     Sortie: (dict) un dictionnaire d'occurence de nombres.
     Effet: /
 

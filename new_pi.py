@@ -74,11 +74,11 @@ def proba_dict_gap(p, dict_value):
 def proba_dict_poker(k, d):
     """
     Entrées: (int) k: entier pour la longueur de la main.
-             (int) d: entier pour #TODO
+             (int) d: le nombre d'intervalle.
     Sortie: (dict) un dictionnaire de probabilités.
     Effet: /
 
-    Crée un dictionnaire de proba par rapport #TODO
+    Crée un dictionnaire de proba par rapport à la longueur de la main et aux intervalles.
     """
     dict_proba = {}
     dict_stir = {}
@@ -95,8 +95,8 @@ def proba_dict_poker(k, d):
 def stirling_number(dict_stir, k, r):
     """
     Entrées: (dict) dict_stir: dictionnaire avec certain nombre de striling.
-             (int) k: entier pour la longueur de la main.
-             (int) r: entier #TODO
+             (int) k: entier utile pour calculer le nombre de stirling.
+             (int) r: entier utile pour calculer le nombre de stirling.
     Sortie: (int) le nombre de Stirling.
     Effet: Rajoute des valeurs dans dict_stir (méthode de mémoïsation).
 
@@ -136,11 +136,11 @@ def Kr(N, dict_value, dict_proba):
 
 def test_chi2(r, list_value, dict_value, dict_proba, deg):
     """
-    Entrées: (int) r: #TODO
-             (list) list_value: #TODO
-             (dict) dict_value: #TODO
-             (dict) dict_proba: #TODO
-             (int) deg: #TODO
+    Entrées: (int) r: le nombre de valeurs possibles.
+             (list) list_value: une liste de nombre.
+             (dict) dict_value: un dictionnaire d'occurence de nombre.
+             (dict) dict_proba: un dictionnaire de probabilité.
+             (int) deg: le degré de liberté.
     Sortie: (list) une liste de tuples avec une valeur de alpha et un booléen.
     Effet: /
 
@@ -199,7 +199,7 @@ def test_poker(list_value, poker, k=5,d=10):
     Entrées: (list) list_value: liste de nombres.
              (bool) poker: False si c'est les décimales de pi, True sinon.
              (int) k: longueur de la main.
-             (int) d: #TODO
+             (int) d: le nombre dintervalle.
     Sortie: un appel vers le test de chi2 --> (list)
     Effet: /
 
