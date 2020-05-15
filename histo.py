@@ -79,10 +79,10 @@ def histo_gap(dict_histo):
 
     Affiche un histogramme lié à la répartition des nombres dans le test du gap.
     """
-    if a == 0 and b == 0.5:
-        titre ="Histogramme sur les décimales de pi en fonction de leur occurence dans l'intervalle [0, 0.5]"
+    if a == 0 and b == 0.4:
+        titre ="Histogramme sur les décimales de pi en fonction de leur occurence dans l'intervalle [0, 0.4]"
     else:
-        titre ="Histogramme sur les décimales de pi en fonction de leur occurence dans l'intervalle [0.5, 1]"
+        titre ="Histogramme sur les décimales de pi en fonction de leur occurence dans l'intervalle [0.5, 0.9]"
     plt.figure()
     plt.bar(dict_histo.keys(), dict_histo.values())
     plt.xlabel("Valeur des longueurs")
@@ -98,7 +98,7 @@ def histo_poker(dict_histo):
 
     Affiche un histogramme lié à la répartition des nombres dans le test du poker.
     """
-    titre ="Histogramme sur les décimales de pi en fonction de leur occurence dans l'intervalle [0, 0.5]"
+    titre ="Histogramme sur les décimales de pi en fonction de leur occurence."
     plt.figure()
     plt.bar(dict_histo.keys(), dict_histo.values())
     plt.xlabel("Valeur des longueurs")
@@ -109,8 +109,8 @@ def histo_poker(dict_histo):
 if __name__ == "__main__":
     list_pi = pi.get_decimal_pi()
     print("(1) Test de Chi2 avec deg 9 :")
-    print("(2) Test de Chi2 avec deg len(dict_value)-1 :")
-    print("(3) Test du Gap :")
+    print("(2) Test du Gap avec a=0 et b=0.4:")
+    print("(3) Test du Gap avec a=0.4 et b=0.9:")
     print("(4) Test du Poker :")
     print("(5) Exit")
     number_test = int(input("Quel test voulez-vous ?" + '\n'))
@@ -120,14 +120,14 @@ if __name__ == "__main__":
         histo_chi2(list_pi)
     elif number_test == 2:
         a = 0
-        b = 0.5
+        b = 0.4
         for i in range(len(list_pi)):
             list_pi[i] /= 10
         dict_histo = dict_gap(a, b, list_pi, True)
         histo_gap(dict_histo)
     elif number_test == 3:
         a = 0.5
-        b = 1
+        b = 0.9
         for i in range(len(list_pi)):
             list_pi[i] /= 10
         dict_histo = dict_gap(a, b, list_pi, True)
