@@ -9,9 +9,9 @@ def randFloat(decimal_number):
     """
     Entrée: (int) nombre de décimales que devra avoir le nombre.
     Sortie: (float) un nombre avec le bon nombre de décimales.
-    Effet: /
+    Effet de bord: /
 
-    Crée un nombre avec un certain nombre de décimale.
+    Crée un nombre entre [0, 1[ avec decimal_number décimales.
     """
     floating = ""
     for __ in range(decimal_number):
@@ -28,9 +28,9 @@ def generator_random(decimal_number):
     """
     Entrée: (int) nombre de décimales que devra avoir le nombre.
     Sortie: (float) un nombre avec le bon nombre de décimales.
-    Effet: /
+    Effet de bord: /
 
-    Crée, avec le module random de python, un nombre avec un certain nombre de décimale.
+    Crée, avec le module random de python, un nombre entre [0, 1[ decimal_number décimales.
     """
     number = random.random()
     number = math.floor(number*(10**decimal_number))/(10**decimal_number)

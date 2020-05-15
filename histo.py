@@ -9,7 +9,7 @@ def dict_gap(a, b, list_value, pi2):
              (list) list_value: liste de nombres
              (bool) pi2: True si c'est les décimales de pi, False sinon.
     Sortie: (dict) un dictionnaire reprenant le nombre d'occurence des longueurs.
-    Effet: /
+    Effet de bord: /
 
     Crée un dictionnaire d'occurence comme pour le test du gap.
     """
@@ -40,7 +40,7 @@ def dict_poker(list_value, poker, k=5, d=10):
              (int) k: longueur de la main.
              (int) d: le nombre d'intervalle.
     Sortie: (dict) un dictionnaire d'occurence de nombres.
-    Effet: /
+    Effet de bord: /
 
     Crée le dictionnaire d'occurence comme pour le test du poker.
     """
@@ -59,7 +59,7 @@ def histo_chi2(liste):
     """
     Entrée: (list) une liste totale de nombres.
     Sortie: /
-    Effet: Un histogramme se crée.
+    Effet de bord: Un histogramme se crée.
 
     Affiche un histogramme lié à la répartition des nombres dans le test de chi2.
     """
@@ -75,14 +75,14 @@ def histo_gap(dict_histo):
     """
     Entrée: (dict) un dictionnaire d'occurence.
     Sortie: /
-    Effet: Un histogramme se crée.
+    Effet de bord: Un histogramme se crée.
 
-    Affiche un histogramme lié à la répartition des nombres dans le test du gap.
+    Affiche un histogramme lié à la répartition des longueurs dans le test du gap.
     """
     if a == 0 and b == 0.4:
-        titre ="Histogramme sur les décimales de pi en fonction de leur occurence dans l'intervalle [0, 0.4]"
+        titre ="Histogramme des décimales de pi en fonction des occurences sur [0, 0.4]"
     else:
-        titre ="Histogramme sur les décimales de pi en fonction de leur occurence dans l'intervalle [0.5, 0.9]"
+        titre ="Histogramme des décimales de pi en fonction des occurences sur [0.5, 0.9]"
     plt.figure()
     plt.bar(dict_histo.keys(), dict_histo.values())
     plt.xlabel("Valeur des longueurs")
@@ -94,9 +94,10 @@ def histo_poker(dict_histo):
     """
     Entrée: (dict) un dictionnaire d'occurence.
     Sortie: /
-    Effet: Un histogramme se crée.
+    Effet de bord: Un histogramme se crée.
 
-    Affiche un histogramme lié à la répartition des nombres dans le test du poker.
+    Affiche un histogramme lié à la répartition des nombres d'intervalles dans lesquelles se trouvent
+    au moins un élément étudié dans le test du poker.
     """
     titre ="Histogramme sur les décimales de pi en fonction de leur occurence."
     plt.figure()

@@ -5,7 +5,7 @@ def get_decimal_pi():
     """
     Entrée: /
     Sortie: (list) une liste contenant les décimales de pi.
-    Effet: /
+    Effet de bord: /
 
     Crée une liste contenant 1 000 000 d'entiers représentant les décimales de pi.
     """
@@ -23,7 +23,7 @@ def occ_number(list_value):
     """
     Entrée: (list) une liste de nombre.
     Sortie: (dict) un dictionnaire de nombre.
-    Effet: /
+    Effet de bord: /
 
     Crée un dictionnaire calculant l'occurence de chaque nombre.
     """
@@ -40,9 +40,9 @@ def proba_dict_chi2(r, dict_value):
     Entrées: (int) r: entier pour la loi uniforme.
              (dict) dict_value: dictionnaire d'occurence de nombres.
     Sortie: (dict) un dictionnaire de probabilités.
-    Effet: /
+    Effet de bord: /
 
-    Crée un dictionnaire de probabilités avec l'entier r et si le nombre se trouve dans le dictionnaire.
+    Crée un dictionnaire de probabilités associant chaque valeur possible avec la probabilité d'obtenir cette valeur.
     """
     dict_proba = {}
     proba = 1/r
@@ -55,9 +55,9 @@ def proba_dict_gap(p, dict_value):
     Entrées: (float) p: une probabilité.
              (dict) dict_value: un dictionnaire d'occurence de nombres.
     Sortie: (dict) un dictionnaire de probabilités.
-    Effet: /
+    Effet de bord: /
 
-    Crée un dictionnaire de probabilité avec les nombres se trouvant dans le dictionnaire d'occurence.
+    Crée un dictionnaire associant les différentes longueurs que l'on peut obtenir avec la probabilités d'obtenir cette longueur.
     """
     dict_proba = {}
     for i in dict_value:
@@ -76,9 +76,10 @@ def proba_dict_poker(k, d):
     Entrées: (int) k: entier pour la longueur de la main.
              (int) d: le nombre d'intervalle.
     Sortie: (dict) un dictionnaire de probabilités.
-    Effet: /
+    Effet de bord: /
 
-    Crée un dictionnaire de proba par rapport à la longueur de la main et aux intervalles.
+    Crée un dictionnaire associant le nombre d'intervalle dans lesquelles on trouve au moins une valeur
+    à la probabilité d'obtenir ce nombre d'intervalle.
     """
     dict_proba = {}
     dict_stir = {}
@@ -98,7 +99,7 @@ def stirling_number(dict_stir, k, r):
              (int) k: entier utile pour calculer le nombre de stirling.
              (int) r: entier utile pour calculer le nombre de stirling.
     Sortie: (int) le nombre de Stirling.
-    Effet: Rajoute des valeurs dans dict_stir (méthode de mémoïsation).
+    Effet de bord: Rajoute des valeurs dans dict_stir (méthode de mémoïsation).
 
     Retourne le nombre de Striling correspondant au k et r
     et modifie dict_stir pour rendre la fonction plus performante.
@@ -123,9 +124,9 @@ def Kr(N, dict_value, dict_proba):
              (dict) dict_value: dictionnaire d'occurence de nombres.
              (dict) dict_proba: dictionnaire de probabilités.
     Sortie: (int) le nombre Kr.
-    Effet: /
+    Effet de bord: /
 
-    Retourne le Kr correspondant qui nous sera utile pour savoir si on rejete ou non.
+    Calcule le Kr.
     """
     kr = 0
     for i in dict_value:
@@ -142,9 +143,9 @@ def test_chi2(r, list_value, dict_value, dict_proba, deg):
              (dict) dict_proba: un dictionnaire de probabilité.
              (int) deg: le degré de liberté.
     Sortie: (list) une liste de tuples avec une valeur de alpha et un booléen.
-    Effet: /
+    Effet de bord: /
 
-    Retourne le test de Chi2 avec le résultat du rejet ou non.
+    Effectue le test de chi2 pour les différentes valeurs d'alpha.
     """
     list_win = []
     kr = Kr(len(list_value), dict_value, dict_proba)
@@ -164,9 +165,9 @@ def test_gap(a, b, list_value, pi):
              (list) list_value: liste de nombres
              (bool) pi: True si c'est les décimales de pi, False sinon.
     Sortie: un appel vers le test de chi2 --> (list)
-    Effet: /
+    Effet de bord: /
 
-    Exécute le test du gap avec un certain intervalle puis se termine sur le test de chi2.
+    Exécute le test du gap avec un certain intervalle.
     """
     if (a >= b) or (a < 0) or (b > 1):
         raise Exception("a, b have to be in [0, 1].")
@@ -201,9 +202,9 @@ def test_poker(list_value, poker, k=5,d=10):
              (int) k: longueur de la main.
              (int) d: le nombre dintervalle.
     Sortie: un appel vers le test de chi2 --> (list)
-    Effet: /
+    Effet de bord: /
 
-    Exécute le test du poker pour finir sur le test de chi2.
+    Exécute le test du poker.
     """
     if poker:
         for i in range(len(list_value)):
